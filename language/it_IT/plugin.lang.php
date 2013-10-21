@@ -33,4 +33,17 @@ $lang['PP_PwdReset_Done'] = 'Password rinnovata';
 $lang['PP_PwdReset_NA'] = 'Password originale';
 $lang['PP %d user pwdreseted'] = 'Rinnovo password richiesto per %d utente';
 $lang['PP %d users pwdreseted'] = 'Rinnovo password richiesto per %d utenti';
+$lang['PP_passwtestTitle'] = 'Prova la complessità di una password';
+$lang['PP_passwtestTitle_d'] = 'Inserisci la password per testarla e quindi fare clic su &quot;Calcolo del punteggio&quot;, per vedere il risultato.';
+$lang['PP_passwTitle_d'] = 'L\'attivazione di questa opzione rende obbligatorio l\'inserimento di una password al momento dell\'iscrizione, e richiede la password scelta dal visitatore di incontrare un livello minimo di complessità. Se la soglia non viene raggiunta, il punteggio conseguito e il punteggio minimo da raggiungere sono visualizzate, insieme con raccomandazioni per aumentare il valore di questa partitura.<br><br>
+Non vi è prova in campo per misurare la complessità di una password, e può permettersi di avere un\'idea del punteggio per definire personalizzati complessi.<br><br>
+Nota: Il punteggio di una password è calcolato sulla base di diversi parametri: la lunghezza, il tipo di caratteri utilizzati (lettere, numeri, lettere maiuscole, minuscole, caratteri speciali). Un punteggio inferiore a 100 è considerata bassa, da 100 a 500, la complessità è nella media, oltre 500, la sicurezza è eccellente.';
+$lang['PP_passwadmTitle_d'] = 'Un amministratore può creare un account utente con o senza l\'applicazione della regola della complessità di calcolo.<br><br>
+Nota: Se l\'account utente creato vuole cambiare la password e il rafforzamento password per gli utenti è attivo, sarà soggetta alla regola.';
+$lang['PP_PwdResetTitle_d'] = 'L\'attivazione di questa opzione aggiunge una nuova funzionalità nel pannello di gestione degli utenti Piwigo (Utenti> Gestione) che può essere applicato per rinnovare la password per gli utenti selezionati. Inoltre, una nuova colonna viene aggiunta per mostrare lo stato di password per ciascuno di essi con i seguenti valori:<br>
+Password in attesa di rinnovo: Una richiesta per una nuova password è stata inserita.<br>
+- Password rinnovata: La password è stata cambiata dopo una richiesta.<br>
+- Password originale: La password originale scelta al momento della creazione dell\'account non è mai stata cambiata.<br>
+Webmaster, account generici e gli ospiti sono esclusi da questa funzione.<br>
+Questi utenti saranno automaticamente reindirizzati alla loro pagina di personalizzazione per ciascuna delle loro connessioni fino a quando hanno cambiato la propria password e un messaggio esplicito verrà visualizzato in questa pagina.';
 ?>

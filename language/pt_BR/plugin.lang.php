@@ -20,23 +20,23 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['UAM_Title'] = 'Password Policy - versão:';
-$lang['UAM_submit'] = 'Submeter configurações';
-$lang['UAM_save_config'] = 'Configurações salvas';
-$lang['UAM_Disable'] = 'Desabilitar (padrão)';
-$lang['UAM_Enable'] = 'Habilitar';
+$lang['PP_Title'] = 'Password Policy - versão:';
+$lang['PP_submit'] = 'Submeter configurações';
+$lang['PP_save_config'] = 'Configurações salvas';
+$lang['PP_Disable'] = 'Desabilitar (padrão)';
+$lang['PP_Enable'] = 'Habilitar';
 $lang['PP_Error_Password_Mandatory'] = 'Segurança: Senha é obrigatório!';
 $lang['PP_Error_Password_Need_Enforcement_%s'] = 'Segurança: Um sistema de controle calcula uma pontuação na complexidade das senhas escolhidas. A complexidade de sua senha é muito baixa (pontuação=%s). Por favor, escolha uma nova senha mais segura, seguindo as seguintes regras: <br>
 - Use letras e números <br>
 - Use maiúsculas e minúsculas<br>
 - Aumentar o comprimento (número de caracteres) <br>
 A pontuação mínima exigido nas senhas pelo administrador é:';
-$lang['UAM_AdminPassword_Enforced'] = 'Inscrição para administradores';
-$lang['UAM_Default user cannot be pwdreset'] = 'Renovação de senha não pode ser definido para conta de usuário padrão!';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Renovação de senha não pode ser definido para a conta webmaster!';
-$lang['UAM_Admins cannot be pwdreset'] = 'Renovação de senha não pode ser feita para contas de administradores!';
-$lang['UAM_You cannot pwdreset your account'] = 'Renovação de senha não pode ser definido por sua própria conta!';
-$lang['UAM_You need to confirm pwdreset'] = 'Você deve confirmar renovação de senha (caixa de seleção)!';
-$lang['UAM %d user pwdreseted'] = 'Obrigatória a renovação da senha para o usuário %d';
-$lang['UAM %d users pwdreseted'] = 'Obrigatória a renovação da senha para os usuários %d';
+$lang['PP_AdminPassword_Enforced'] = 'Inscrição para administradores';
+$lang['PP_Default user cannot be pwdreset'] = 'Renovação de senha não pode ser definido para conta de usuário padrão!';
+$lang['PP_Webmaster cannot be pwdreset'] = 'Renovação de senha não pode ser definido para a conta webmaster!';
+$lang['PP_Admins cannot be pwdreset'] = 'Renovação de senha não pode ser feita para contas de administradores!';
+$lang['PP_You cannot pwdreset your account'] = 'Renovação de senha não pode ser definido por sua própria conta!';
+$lang['PP_You need to confirm pwdreset'] = 'Você deve confirmar renovação de senha (caixa de seleção)!';
+$lang['PP %d user pwdreseted'] = 'Obrigatória a renovação da senha para o usuário %d';
+$lang['PP %d users pwdreseted'] = 'Obrigatória a renovação da senha para os usuários %d';
 ?>

@@ -33,4 +33,17 @@ $lang['PP_PwdReset_Done'] = 'Contraseña renovada';
 $lang['PP_PwdReset_NA'] = 'Contraseña original';
 $lang['PP %d user pwdreseted'] = 'Se pide renovación de contraseña para el usuario %d';
 $lang['PP %d users pwdreseted'] = 'Se pide renovación de contraseña para los usuarios %d';
+$lang['PP_passwtestTitle'] = 'Prueba de la complejidad de la contraseña';
+$lang['PP_passwtestTitle_d'] = 'Introduzca la contrase&ntilde;a para pruebar y luego haga clic en &quot;c&aacute;lcular complejidad&quot; para ver el resultado.';
+$lang['PP_passwTitle_d'] = 'Al habilitar esta opción hace obligatoria la creación de una contraseña en el registro, y requiere la contraseña elegida por el usuario para cumplir un nivel mínimo de complejidad. Si el umbral no se alcanza, la puntuación obtenida y la puntuación mínima que deben alcanzarse se muestran, junto con recomendaciones para aumentar el valor de esta puntuación.<br><br>
+Un campo de prueba permite medir la complejidad de la contraseña, y puede hacerse una idea de la puntuación necesaria para alcanzar una contraseña valida .<br><br>
+Nota: La puntuación de una contraseña se calcula en función de varios parámetros: longitud, tipo de caracteres utilizados (letras, números, mayúsculas, minúsculas, caracteres especiales). Una puntuación por debajo de 100 se considera bajo, de 100 a 500, la complejidad es mediana, más allá de 500, la seguridad es excelente.';
+$lang['PP_passwadmTitle_d'] = 'Un administrador puede crear una cuenta de usuario, con o sin aplicación de la regla de la complejidad informática.<br><br>
+Nota: Si el  usuario de la cuenta  creada quiere cambiar la contraseña, y el fortalecimiento de las contraseñas de los usuarios está activo, la misma estará sujeta a la norma establecida.';
+$lang['PP_PwdResetTitle_d'] = 'Al habilitar esta opción, se agregará una nueva función en el panel de gestión de usuarios de Piwigo (Usuarios> Administrar) para  solicitar la renovación de la contraseña para los usuarios seleccionados. Además, una nueva columna se agrega para mostrar el estado de contraseñas para cada uno de ellos con los siguientes valores: <br>
+- La contraseña debe renovarse:. Una solicitud de renovación de contraseña ha sido planeado <br>
+- Password renovado:. La contraseña se ha renovado después de una solicitud <br>
+- Password Original:. La contraseña original elegido al crear la cuenta y que nunca ha sido requerido para una renovación <br>
+Webmaster, cuentas genéricas y su acompañante están excluidos de esta función. <br>
+Estos usuarios serán redirigidos automáticamente a su página de personalización en cada una de sus conexiones hasta que cambien su contraseña y un mensaje explícito se muestrara en esta página.';
 ?>

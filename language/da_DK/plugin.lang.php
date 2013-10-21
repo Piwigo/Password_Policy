@@ -54,4 +54,17 @@ $lang['PP_PwdReset_Done'] = 'Adgangskoden er fornyet';
 $lang['PP_PwdReset_NA'] = 'Oprindelig adgangskode';
 $lang['PP %d user pwdreseted'] = 'Fornyelse af adgangskode krævet af brugerne %s';
 $lang['PP %d users pwdreseted'] = 'Fornyelse af adgangskode krævet af brugerne %s';
+$lang['PP_passwtestTitle'] = 'Tester adgangskodens kompleksitet';
+$lang['PP_passwtestTitle_d'] = 'Skriv adgangskoden, der skal testes, og klik dernæst på &quot;Beregn score&quot; for at se resultatet.';
+$lang['PP_passwTitle_d'] = 'Aktivering af denne valgmulighed gør det til at krav at have en adgangskode ved registreringen, og kræver at den valgte adgangskode opfylder et minimalt kompleksitetsniveau.  Hvis tærsklen ikke opfyldes, vil den opnåede score og den minimale score, der skal opfyldes, blive vist, sammen med anbefalinger til forbedring af scoren.<br><br>
+Der er et testfelt til måling af adgangskodens kompleksitet, og som giver en idé om hvordan man definerer en sådan.<br><br>
+Bemærk: Adgangskodens score beregnes ud fra flere parametre: længde, typen af benyttede tegn (bogstaver, tal, store bogstaver, små bogstaver, særlige tegn). En score på under 100 betragtes som lav, fra 100 til 500 er kompleksiteten gennemsnitlig og over 500 er sikkerheden fremragende.';
+$lang['PP_passwadmTitle_d'] = 'En administrator kan oprette en brugerkonto med eller uden krav om kompleksitetsberegning.<br><br>
+Bemærk: Hvis en brugeren senere ønsker at ændre adgangskode og der er krav om at brugerne har stærke adgangskoder, vil adgangskoden blive udsat for kravet.';
+$lang['PP_PwdResetTitle_d'] = 'Aktivering af denne valgmulighed tilføjer en ny funktion til Piwigos brugerhåndteringspanel (Brugere > Håndter), vedrørende fornyelse af udvalgte brugeres adgangskoder. Desuden tilføjes en ny kolonne, som viser adgangskodestatus for hver af dem, med følgende værdier:<br>
+- Adgangskode skal fornyes: Der er planlagt at bede om fornyelse af adgangskoden.<br>
+- Adgangskode fornyet: Adgangskoden er blevet fornyet, efter der er bedt om det.<br>
+- Oprindelig adgangskode: Den oprindelige adgangskode valgt ved kontooprettelsen, og som aldrig har været krævet fornyet.<br>
+Funktionen gælder ikke webmaster, generiske og gæstekonti.<br>
+Disse brugere vil automatisk blive omdirigeret til deres opsætningsside, hver gang de logger på, indtil adgangskoden er blevet ændret, og der vil eksplicit blive givet besked om det på den side.';
 ?>

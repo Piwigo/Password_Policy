@@ -33,4 +33,17 @@ $lang['PP_PwdReset_Done'] = 'Password renewed';
 $lang['PP_PwdReset_NA'] = 'Original password';
 $lang['PP %d user pwdreseted'] = 'Password renewal required for %d user';
 $lang['PP %d users pwdreseted'] = 'Password renewal required for %d users';
+$lang['PP_passwtestTitle'] = 'Testing the complexity of a password';
+$lang['PP_passwtestTitle_d'] = 'Enter the password to test and then click on &quot;Score calculation&quot; to see the result.';
+$lang['PP_passwTitle_d'] = 'Enabling this option makes mandatory the seizure of a password upon registration, and requires the password chosen by the visitor to meet a minimum level of complexity. If the threshold is not reached, the score achieved and the minimum score to be achieved are displayed, along with recommendations to increase the value of this score.<br><br>
+There is field test to measure the complexity of a password, and can afford to get an idea of the score to define complex custom.<br><br>
+Note: The score of a password is calculated based on several parameters: length, type of characters used (letters, digits, uppercase, lowercase, special characters). A score below 100 is considered low, from 100 to 500, the complexity is average; beyond 500, the security is excellent.';
+$lang['PP_passwadmTitle_d'] = 'An administrator can create a user account with or without application of the rule of computing complexity.<br><br>
+Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.';
+$lang['PP_PwdResetTitle_d'] = 'Enabling this option will add a new feature in the Piwigo\'s user management panel (Users> Manage) that can apply to renew the password for selected users. In addition, a new column is added to show the status of passwords for each of them with the following values:<br>
+- Password to be renewed: A password renewal request has been planned.<br>
+- Password renewed: The password has been renewed after a request.<br>
+- Original Password: The original password chosen at account creation and has never been required for a renewal.<br>
+Webmaster, generic and guest accounts are excluded from this function.<br>
+These users will be automatically redirected to their customization page at each of their connections until they changed their password and an explicit message will be displayed on this page.';
 ?>

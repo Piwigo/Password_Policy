@@ -33,4 +33,17 @@ $lang['PP_PwdReset_Done'] = 'Mot de passe modifié';
 $lang['PP_PwdReset_NA'] = 'Mot de passe original';
 $lang['PP %d user pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateur';
 $lang['PP %d users pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateurs';
+$lang['PP_passwtestTitle'] = 'Tester la complexité d\'un mot de passe';
+$lang['PP_passwtestTitle_d'] = 'Saisir le mot de passe à tester puis cliquer sur le bouton &quot;Calcul du score&quot; pour afficher le résultat.';
+$lang['PP_passwTitle_d'] = 'L\'activation de cette option rend obligatoire la saisie d\'un mot de passe  à l\'inscription, et oblige le mot de passe choisi par le visiteur à répondre à un niveau minimum de complexité. Si ce seuil n\'est pas atteint, le score réalisé et le score minimum à atteindre sont affichés, ainsi que des recommandations pour augmenter la valeur de ce score.<br><br>
+Un champ de test permet de mesurer la complexité d\'un mot de passe, et peut permettre de se faire une idée du score à définir pour une complexité personnalisée.<br><br>
+NB: Le score d\'un mot de passe est calculé en fonction de plusieurs paramètres : longueur, types de caractères utilisés (lettres, chiffres, majuscules, minuscules, caractères spéciaux). Un score inférieur à 100 est considéré comme faible; de 100 à 500, la complexité est dans la moyenne; au-delà de 500, la sécurité est excellente.';
+$lang['PP_passwadmTitle_d'] = 'Un administrateur peut créer un compte d\'utilisateur avec ou sans application de la règle de calcul de complexité.<br><br>
+A noter : Si l\'utilisateur du compte ainsi créé désire changer de mot de passe et que le renforcement des mots de passe pour les utilisateurs est actif, il sera soumis à la règle configurée.';
+$lang['PP_PwdResetTitle_d'] = 'L\'activation de cette option ajoutera une nouvelle fonction dans le panneau de gestion de utilisateurs (Utilisateurs > Gérer) de Piwigo qui permet de demander le renouvellement du mot de passe pour les utilisateurs sélectionnés. De plus, une nouvelle colonne s\'ajoutera pour présenter le statut des mots de passe pour chacun d\'eux avec les valeurs suivantes :<br>
+- Mot de passe à changer : Une demande de changement de mot de passe a été programmée.<br>
+- Mot de passe modifié : Le mot de passe a été changé suite à une demande.<br>
+- Mot de passe original : Le mot de passe est celui choisi à la création du compte et n\'a jamais fait l\'objet d\'une demande de changement.<br>
+Le compte webmaster, génériques et invités (Guest) sont exclus de cette fonction.<br><br>
+Ces utilisateurs seront alors systématiquement redirigés vers leur page de personnalisation à chacune de leurs connexions tant qu\'ils n\'auront pas modifié leur mot de passe. Un message explicite sera affiché sur cette page.';
 ?>

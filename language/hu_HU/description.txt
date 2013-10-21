@@ -1,1 +1,1 @@
-"Felhasználók kezelése" lehetőségek bővítése.
+Javítani jelszóházirendek

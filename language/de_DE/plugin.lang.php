@@ -33,4 +33,17 @@ $lang['PP_PwdReset_Done'] = 'Passwort erneuert';
 $lang['PP_PwdReset_NA'] = 'Original-Passwort';
 $lang['PP %d user pwdreseted'] = 'Passwortänderung für %d Benutzer erforderlich.';
 $lang['PP %d users pwdreseted'] = 'Passwortänderungen für %d Benutzer erforderlich.';
+$lang['PP_passwtestTitle'] = 'Prüfung der Passworts Komplexität';
+$lang['PP_passwtestTitle_d'] = 'Geben Sie das Passwort zu testen, und klicken Sie auf &quot;Ergebnis Berechnung&quot;, um das Ergebnis zu sehen.';
+$lang['PP_passwTitle_d'] = 'Durch die Aktivierung dieser Option ist zwingend die Beschlagnahme eines Passwortes bei der Anmeldung und das Passwort erfordert vom Besucher ausgewählt, um ein Mindestmaß an Komplexität gerecht zu werden. Wird der Schwellenwert nicht erreicht wird, die Gäste erzielt, und die Mindestpunktzahl erreicht werden soll angezeigt werden, zusammen mit Empfehlungen an den Wert dieser Gäste zu steigern.<br><br>
+Es gibt Feldtest der Komplexität eines Passworts zu messen und sich leisten können, eine Vorstellung von der Partitur zu erhalten, um komplexe, kundenspezifische definieren.<br><br>
+Hinweis: Die Gäste eines Passwortes ist auf der Grundlage mehrerer Parameter: Länge berechnet, die Art der verwendeten Zeichen (Buchstaben, Ziffern, Großbuchstaben, Kleinbuchstaben, Sonderzeichen). Ein Wert unter 100 wird als gering, zwischen 100 und 500, die Komplexität ist durchschnittlich, mehr als 500, die Sicherheit ist sehr gut.';
+$lang['PP_passwadmTitle_d'] = 'Ein Administrator kann einen Benutzer-Account erstellen, mit oder ohne Anwendung der Regel der Komplexit&auml;t des Computings.<br><br>
+Hinweis: Wenn der Benutzer erstellte Konto will Passwort zu &auml;ndern und Passwörter f&uuml;r die Benutzer St&auml;rkung aktiv ist, wird es vorbehaltlich der Regel-Satz.';
+$lang['PP_PwdResetTitle_d'] = 'Das Aktivieren dieser Option wird eine neue Funktion im Piwigo-Benutzerverwaltung Panel hinzufügen (Benutzer> Verwalten), das kann sich bewerben, um das Passwort für ausgewählte Benutzer zu erneuern. Darüber hinaus wird eine neue Spalte hinzugefügt, um den Status von Passwörtern für jeden von ihnen für die folgenden Werte:<br>
+- Passwort erneuert werden: Ein Passwort Antrag auf Verlängerung ist geplant.<br>
+- Passwort erneuert: Das Passwort hat nach einer Anfrage erneuert worden.<br>
+- Original-Passwort: Das Original-Passwort an Account-Erstellung gewählt und hat noch nie für eine Erneuerung erforderlich gewesen.<br>
+Webmaster, generischen und Gast-Accounts sind von dieser Funktion ausgeschlossen.<br>
+Diese Benutzer werden automatisch auf ihre Anpassung an jeder Seite ihrer Verbindungen umgeleitet werden, bis sie ihr Passwort geändert und eine explizite Meldung auf dieser Seite angezeigt werden.';
 ?>
