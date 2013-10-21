@@ -106,8 +106,8 @@ if (isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true')
       if (($conf['guest_id'] != $conf['default_user_id']) and
         in_array($conf['default_user_id'], $collection))
       {
-        array_push($page['errors'], l10n('PP_Default user cannot be pwgreset'));
-        $template->append('errors', l10n('PP_Default user cannot be pwgreset'));
+        array_push($page['errors'], l10n('PP_Default user cannot be pwdreset'));
+        $template->append('errors', l10n('PP_Default user cannot be pwdreset'));
       }
       if (in_array($conf['webmaster_id'], $collection))
       {

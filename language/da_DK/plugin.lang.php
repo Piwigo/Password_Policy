@@ -1,0 +1,57 @@
+<?php
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based photo gallery                                    |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008-2012 Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
+$lang['PP_Title'] = 'Password Policy - Version: ';
+$lang['PP_SubTitle'] = 'Opsætning af plugin';
+$lang['PP_submit'] = 'Gem indstillinger';
+$lang['PP_save_config'] = 'Opsætning er gemt.';
+$lang['PP_Disable'] = ' Deaktiver (standard)';
+$lang['PP_Enable'] = 'Aktiver';
+$lang['PP_Support_txt'] = 'Officiel support af denne plugin er kun tilgængelig i disse Piwigo-forumemner:<br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=" onclick="window.open(this.href);return false;">Engelsk forum - http://piwigo.org/forum/viewtopic.php?id=</a>';
+$lang['PP_PasswordTest'] = 'Adgangskodetest:';
+$lang['PP_ScoreTest'] = 'Resultat:';
+$lang['PP_Error_Password_Mandatory'] = 'Sikkerhed: En adgangskode er påkrævet!';
+$lang['PP_Error_Password_Need_Enforcement_%s'] = 'Sikkerhed: Et kontrolsystem beregner en værdi for den valgte adgangskodes kompleksitet. Din adgangskodes kompleksitet er for lav (værdi = %s). Vær venlig at vælge en ny og mere sikker adgangskode ved at følge disse regler:<br>
+- Brug bogstaver og tal<br>
+- Brug små og store bogstaver<br>
+- Forøg længden (antal tegn)<br>
+Administratoren kræver følgende minimale adgangskodeværdi:';
+$lang['PP_Password_Enforced'] = 'Stærkere sikkerhedsniveau på adgangkoder';
+$lang['PP_Password_Enforced_true'] = ' Aktiver. Minimal score:';
+$lang['PP_AdminPassword_Enforced'] = 'Gældende administratorer';
+$lang['PP_Password_Reset_Msg'] = 'Vær venlig at ændre din adgangskode!';
+$lang['PP_PwdReset'] = 'Fornyelse af adgangskode';
+$lang['PP_Password reset selected users'] = 'Bed om at udvalgte brugere fornyer deres adgangskode';
+$lang['PP_Guest cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for gæstekonto!';
+$lang['PP_Default user cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for standardbrugerkontoen!';
+$lang['PP_Webmaster cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes på webmasterkontoen!';
+$lang['PP_Generic cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for generiske konti!';
+$lang['PP_Admins cannot be pwdreset'] = 'Adgangskodefornyelse kan ikke opsættes på administatorkonto!';
+$lang['PP_You cannot pwdreset your account'] = 'Fornyelse af adgangskode kan ikke opsættes på din egen konto!';
+$lang['PP_You need to confirm pwdreset'] = 'Du skal bekræfte fornyelse af adgangskode (checkboks)!';
+$lang['PP_PwdReset_Todo'] = 'Adgangskoden fornyes';
+$lang['PP_PwdReset_Done'] = 'Adgangskoden er fornyet';
+$lang['PP_PwdReset_NA'] = 'Oprindelig adgangskode';
+$lang['PP %d user pwdreseted'] = 'Fornyelse af adgangskode krævet af brugerne %s';
+$lang['PP %d users pwdreseted'] = 'Fornyelse af adgangskode krævet af brugerne %s';
+?>

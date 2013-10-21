@@ -58,7 +58,7 @@ $version = $plugin['version'];
   }
   else if (isset($_POST['PasswordTest']) and empty($_POST['PP_Password_Test']))
   {
-    array_push($page['errors'], l10n('PP_reg_err_login3'));
+    array_push($page['errors'], l10n('PP_Error_Password_Mandatory'));
   }
 
   $conf_PP = unserialize($conf['PasswordPolicy']);

@@ -15,15 +15,11 @@ jQuery().ready(function()
 </script>
 
 <div class="titrePage">
-  <h2>{'PP_Title_Tab'|@translate} {$PP_VERSION}<br/>{'PP_SubTitle1'|@translate}</h2>
+  <h2>{'PP_Title'|@translate} {$PP_VERSION}<br/>{'PP_SubTitle'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
 <fieldset>
-  <span class="cluetip" title="{'PP_Title1'|translate}|{'PP_restricTitle_d'|translate}">
-    {'PP_Title1'|@translate}
-  </span>
-
   <ul>
     <li>
       <label class="cluetip" title="{'PP_Password_Enforced'|translate}|{'PP_passwTitle_d'|translate}">

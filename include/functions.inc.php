@@ -191,7 +191,7 @@ WHERE user_id = '.$user['id'].'
 
     if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
     {
-      if (PP_check_pwgreset($user['id']))
+      if (PP_check_pwdreset($user['id']))
       {
         redirect(PHPWG_ROOT_PATH.'profile.php');
       }
@@ -229,7 +229,7 @@ function PP_RegistrationCheck($errors, $user)
   
         if ($PasswordCheck < $conf_PP['PASSWORD_SCORE'])
         {
-          $message = get_l10n_args('PP_reg_err_login4_%s', $PasswordCheck);
+          $message = get_l10n_args('PP_Error_Password_Need_Enforcement_%s', $PasswordCheck);
           $lang['reg_err_pass'] = l10n_args($message).$conf_PP['PASSWORD_SCORE'];
           array_push($errors, $lang['reg_err_pass']);
         }
@@ -240,7 +240,7 @@ function PP_RegistrationCheck($errors, $user)
   
         if ($PasswordCheck < $conf_PP['PASSWORD_SCORE'])
         {
-          $message = get_l10n_args('PP_reg_err_login4_%s', $PasswordCheck);
+          $message = get_l10n_args('PP_Error_Password_Need_Enforcement_%s', $PasswordCheck);
           $lang['reg_err_pass'] = l10n_args($message).$conf_PP['PASSWORD_SCORE'];
           array_push($errors, $lang['reg_err_pass']);
         }
@@ -263,7 +263,7 @@ function PP_Profile_Init()
   // ------------------------------------------
   if ((isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true'))
   {
-    if (PP_check_pwgreset($user['id']))
+    if (PP_check_pwdreset($user['id']))
     {
       $template->append('errors', l10n('PP_Password_Reset_Msg'));
     }
@@ -275,7 +275,7 @@ function PP_Profile_Init()
   {
     // Password reset control
     // ----------------------
-    if (isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true' and PP_check_pwgreset($user['id']))
+    if (isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true' and PP_check_pwdreset($user['id']))
     {
       // if password not changed then pwdreset field = true else pwdreset field = false
       // ------------------------------------------------------------------------------
@@ -301,7 +301,7 @@ LIMIT 1
 
         if ($PasswordCheck < $conf_PP['PASSWORD_SCORE'])
         {
-          $message = get_l10n_args('PP_reg_err_login4_%s', $PasswordCheck);
+          $message = get_l10n_args('PP_Error_Password_Need_Enforcement_%s', $PasswordCheck);
           $template->append('errors', l10n_args($message).$conf_PP['PASSWORD_SCORE']);
           unset($_POST['use_new_pwd']);
           unset($_POST['validate']);
@@ -339,7 +339,7 @@ LIMIT 1
  * @returns    : true or false whether the users has already changed his password
  * 
  */
-function PP_check_pwgreset($uid)
+function PP_check_pwdreset($uid)
 {
   $query = '
 SELECT PP_pwdreset
