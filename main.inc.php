@@ -3,7 +3,7 @@
 Plugin Name: Password Policy
 Version: auto
 Description: Renforcer la sécurité des mots de passe - Enforce password security
-Plugin URI: http://piwigo.org/ext/extension_view.php?eid=
+Plugin URI: http://piwigo.org/ext/extension_view.php?eid=718
 Author: Eric
 Author URI: http://www.infernoweb.net
 */
