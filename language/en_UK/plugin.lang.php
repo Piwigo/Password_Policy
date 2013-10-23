@@ -68,4 +68,6 @@ $lang['PP_Admins is not unlockable'] = 'Admin users can not be locked and can no
 $lang['PP_User Not Locked'] = 'User not locked';
 $lang['PP_User Locked'] = 'User locked';
 $lang['PP_You need to confirm unlock'] = 'You must confirm unlocking (check box)!';
+$lang['PP %d user unlocked'] = '%d user unlocked';
+$lang['PP %d users unlocked'] = '%d users unlocked';
 ?>

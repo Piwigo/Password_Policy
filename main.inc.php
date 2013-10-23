@@ -26,13 +26,13 @@ $conf_PP = unserialize($conf['PasswordPolicy']);
 // ---------------------------
 add_event_handler('get_admin_plugin_menu_links', 'PP_admin_menu');
 
-// Features and controls on user connexion
-// ---------------------------------------
-add_event_handler('loc_begin_index', 'PP_Init');
-
 // Display messages on index page
 // ------------------------------
 add_event_handler('init', 'PP_InitPage');
+
+// Features and controls on user connexion
+// ---------------------------------------
+add_event_handler('loc_begin_index', 'PP_Init');
 
 // Check users registration
 // ------------------------
@@ -42,10 +42,6 @@ if (script_basename() == 'profile')
 {
   add_event_handler('loc_begin_profile', 'PP_Profile_Init');
 }
-
-// Redirection to profile page
-// ---------------------------
-add_event_handler('login_success', 'PP_LoginTasks',EVENT_HANDLER_PRIORITY_NEUTRAL+10, 1);
 
 // Security option : Count of login failure and lock account after x attempt
 // -------------------------------------------------------------------------

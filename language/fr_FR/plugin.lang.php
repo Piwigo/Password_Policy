@@ -56,7 +56,7 @@ $lang['PP_Max number of failed attempts'] = 'Nombre maximum de tentatives : ';
 $lang['PP_Max number of failed attempts_d'] = 'Le chiffre 0 désactive le comptage des tentatives.';
 $lang['PP_UserLocked_Custom_Txt'] = 'Personnalisation du message d\'information à l\'utilisateur verrouillé';
 $lang['PP_UserLocked_Custom_Txt_d'] = 'Vous pouvez modifier ici le texte du message affiché à l\'utilisateur dont le compte est verrouillé. Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['PP_LockedUsers'] = 'Verrouillages';
+$lang['PP_LockedUsers'] = 'Verrous';
 $lang['PP_Unlock'] = 'Déverrouillage';
 $lang['PP_Unlock selected users'] = 'Déverrouiller les utilisateurs sélectionnés';
 $lang['PP_Guest is not unlockable'] = 'Les utilisateurs invités ne sont pas verrouillables et ne peuvent pas être déverrouillés';
@@ -68,4 +68,6 @@ $lang['PP_Admins is not unlockable'] = 'Les utilisateurs administrateurs ne sont
 $lang['PP_User Not Locked'] = 'Utilisateur non verrouillé';
 $lang['PP_User Locked'] = 'Utilisateur verrouillé';
 $lang['PP_You need to confirm unlock'] = 'Vous devez confirmer le déverrouillage (case à cocher) !';
+$lang['PP %d user unlocked'] = '%d utilisateur déverrouillé';
+$lang['PP %d users unlocked'] = '%d utilisateurs déverrouillés';
 ?>

@@ -29,7 +29,7 @@ function PP_admin_menu($menu)
 /**
  * Triggered on loc_begin_index
  * 
- * Initiating GhostTracker - Perform user logout after registration if account locked
+ * Perform user logout after registration if account locked and redirection to profile page is password renewal is set
  */
 function PP_Init()
 {
@@ -39,17 +39,17 @@ function PP_Init()
 
   $conf_PP = unserialize($conf['PasswordPolicy']);
 
-  // Admins, Guests and Adult_Content users are excluded
-  // ---------------------------------------------------
-  if (!is_admin() and !is_a_guest() and $user['username'] != "16" and $user['username'] != "18")
+  // Perfoming redirection for locked accounts
+  // -----------------------------------------
+  if (!is_a_guest() and $user['username'] != "16" and $user['username'] != "18")
   {
     // Perform user logout if user account is locked
     if (
-        (isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
-        and PP_UsrBlock_Verif($user['username'])
-        and !is_admin()
-        and !is_webmaster()
-        )
+          (isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
+          and PP_UsrBlock_Verif($user['username'])
+          //and (isset($userlocked) and $userlocked == 'true')
+          and !is_admin()
+          and !is_webmaster())
     {
       invalidate_user_cache();
       logout_user();
@@ -63,6 +63,28 @@ function PP_Init()
       }
     }
   }
+
+  // Performing redirection to profile page for password reset
+  // ---------------------------------------------------------
+  if ((isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true'))
+  {
+    $query ='
+SELECT user_id, status
+FROM '.USER_INFOS_TABLE.'
+WHERE user_id = '.$user['id'].'
+;';
+    $data = pwg_db_fetch_assoc(pwg_query($query));
+
+    if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
+    {
+      if (PP_check_pwdreset($user['id']))
+      {
+        redirect(PHPWG_ROOT_PATH.'profile.php');
+      }
+    }
+  }
+
+
 }
 
 
@@ -218,7 +240,7 @@ SELECT DISTINCT id, PP_pwdreset
 
 /**
  * PP_user_list_locked
- * Adds a new feature in user_list to allow password reset for selected users by admin
+ * Adds a new feature in user_list to allow user unlocking by admin
  * 
  */
 function PP_user_list_locked($visible_user_list)
@@ -265,65 +287,6 @@ SELECT DISTINCT id, PP_lock
     }
   }
   return $visible_user_list;
-}
-
-
-/**
- * Triggered on login_success
- * 
- * Redirects a visitor (except for admins, webmasters and generic statuses) to his profile.php page if password reset is needed
- * 
- */
-function PP_LoginTasks()
-{
-  global $conf, $user;
-
-  include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
-
-  $conf_PP = unserialize($conf['PasswordPolicy']);
-
-  // Perfoming redirection for locked accounts
-  // -----------------------------------------
-  if (!is_admin() and !is_a_guest() and $user['username'] != "16" and $user['username'] != "18")
-  {
-    // Perform user logout if user account is locked
-    if ((isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
-          and PP_UsrBlock_Verif($user['username'])
-          and !is_admin()
-          and !is_webmaster())
-    {
-      invalidate_user_cache();
-      logout_user();
-      if ($conf['guest_access'])
-      {
-        redirect(make_index_url().'?PP_msg=locked', 0);
-      }
-      else
-      {
-        redirect(get_root_url().'identification.php?PP_msg=locked' , 0);
-      }
-    }
-  }
-
-  // Performing redirection to profile page for password reset
-  // ---------------------------------------------------------
-  if ((isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true'))
-  {
-    $query ='
-SELECT user_id, status
-FROM '.USER_INFOS_TABLE.'
-WHERE user_id = '.$user['id'].'
-;';
-    $data = pwg_db_fetch_assoc(pwg_query($query));
-
-    if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
-    {
-      if (PP_check_pwdreset($user['id']))
-      {
-        redirect(PHPWG_ROOT_PATH.'profile.php');
-      }
-    }
-  }
 }
 
 
