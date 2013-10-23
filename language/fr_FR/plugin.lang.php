@@ -6,7 +6,7 @@ $lang['PP_save_config'] ='Configuration enregistrée.';
 $lang['PP_Disable'] = ' Désactiver (valeur par défaut)';
 $lang['PP_Enable'] = ' Activer ';
 $lang['PP_Support_txt'] = 'Le support officiel sur ce plugin se fait exclusivement sur ce fil du forum FR de Piwigo:<br/>
-<a href="http://fr.piwigo.org/forum/viewtopic.php?id=" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=</a>';
+<a href="http://fr.piwigo.org/forum/viewtopic.php?id=24558" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=24558</a>';
 $lang['PP_PasswordTest'] = 'Calcul du score';
 $lang['PP_ScoreTest'] = 'Résultat: ';
 $lang['PP_Error_Password_Mandatory'] = 'Sécurité : Le mot de passe est obligatoire !';
