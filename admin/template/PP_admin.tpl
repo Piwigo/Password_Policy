@@ -3,16 +3,25 @@
 
 {combine_css path= $PP_PATH|@cat:'admin/template/pp.css'}
 
-<script type="text/javascript">
+{footer_script}{literal}
 jQuery().ready(function()
-{ldelim}
+{
+  jQuery("#PP_LoginAttempts_true").click(function() {
+    jQuery("#PP_USRLOCKEDTXT").show("slow");
+  });
+  jQuery("#PP_LoginAttempts_false").click(function() {
+    jQuery("#PP_USRLOCKEDTXT").hide("slow");
+  });
+  
+
   jQuery('.cluetip').cluetip(
-  {ldelim}
-    width: 500,
+  {
+    width: 550,
     splitTitle: '|'
-  {rdelim});
-{rdelim});
-</script>
+  });
+});
+{/literal}{/footer_script}
+
 
 <div class="titrePage">
   <h2>{'PP_Title'|@translate} {$PP_VERSION}<br/>{'PP_SubTitle'|@translate}</h2>
@@ -68,6 +77,37 @@ jQuery().ready(function()
           {'PP_Enable'|@translate}
         </label>
       </li>
+
+      <li>
+        <label class="cluetip" title="{'PP_LoginAttempts'|translate}|{'PP_LoginAttempts_d'|translate}">
+          {'PP_LoginAttempts'|@translate}
+        </label>
+
+        <label for="PP_LoginAttempts_false"><input id="PP_LoginAttempts_false" value="false" {$PP_LOGFAILEDPASSW_FALSE} name="PP_LogFailedPassw" type="radio"/>
+          {'PP_Disable'|@translate}
+        </label>
+        <label for="PP_LoginAttempts_true"><input id="PP_LoginAttempts_true" value="true" {$PP_LOGFAILEDPASSW_TRUE} name="PP_LogFailedPassw" type="radio"/>
+          {'PP_Enable'|@translate}
+        </label>
+      </li>
+
+      <ul>
+        <li id="PP_USRLOCKEDTXT" {if $PP_LOGFAILEDPASSW_FALSE} style="display: none"{/if}>
+          <label class="cluetip" title="{'PP_Max number of failed attempts'|translate}|{'PP_Max number of failed attempts_d'|translate}">
+            {'PP_Max number of failed attempts'|@translate}&nbsp;&nbsp;<input type="text" name="PP_NbFailedPassw" value="{$PP_NBLOGFAIL}" size="5" style="text-align: center;"/>
+          </label>
+<br />
+          <label class="cluetip" title="{'PP_UserLocked_Custom_Txt'|translate}|{'PP_UserLocked_Custom_Txt_d'|translate}">
+            {'PP_UserLocked_Custom_Txt'|@translate}
+          </label>
+          <textarea class="pp_textfields" name="PP_CustomLockMsg" id="PP_CustomLockMsg" rows="10" {$TAG_INPUT_ENABLED}>{$PP_USRLOCKEDTXT}</textarea>
+          {if 'FCK_PATH'|@defined}
+            <div style="text-align:right;">
+              <a href="#" onClick="toogleEditor('PP_CustomLockMsg'); return false;">FCK Editor On/Off</a>
+            </div>
+          {/if}
+        </li>
+      </ul>
     </ul>
 
   <p>

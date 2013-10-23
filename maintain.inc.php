@@ -31,9 +31,9 @@ function plugin_install()
     'PASSWORD_SCORE'              => '100',
     'ADMINPASSWENF'               => 'false',
     'PWDRESET'                    => 'false',
-    'NBLOGFAIL'                   => '0',
     'LOGFAILBLOCK'                => 'false',
-    'USRLOCKED'                   => l10n('PP_User_Account_Locked_Txt')
+    'NBLOGFAIL'                   => '0',
+    'USRLOCKEDTXT'                => l10n('PP_User_Account_Locked_Txt')
   );
 
 /* **************************************************************** */
@@ -94,7 +94,7 @@ LIKE "PP_loginfailcount"
   {
     $q = '
 ALTER TABLE '.USERS_TABLE.'
-ADD PP_loginfailcount INT NULL DEFAULT NULL
+ADD PP_loginfailcount INT NOT NULL DEFAULT "0"
 ;';
     pwg_query($q);
   }

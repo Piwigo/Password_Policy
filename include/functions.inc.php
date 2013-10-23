@@ -29,7 +29,7 @@ function PP_admin_menu($menu)
 /**
  * Triggered on loc_begin_index
  * 
- * Initiating GhostTracker - Perform user logout after registration if not validated
+ * Initiating GhostTracker - Perform user logout after registration if account locked
  */
 function PP_Init()
 {
@@ -44,21 +44,68 @@ function PP_Init()
   if (!is_admin() and !is_a_guest() and $user['username'] != "16" and $user['username'] != "18")
   {
     // Perform user logout if user account is locked
-    if ((isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
-          and PP_UsrBlock_Verif($user['id'])
-          and !is_admin()
-          and !is_webmaster())
+    if (
+        (isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
+        and PP_UsrBlock_Verif($user['username'])
+        and !is_admin()
+        and !is_webmaster()
+        )
     {
       invalidate_user_cache();
       logout_user();
-      if ( $conf['guest_access'] )
+      if ($conf['guest_access'])
       {
-        redirect( make_index_url().'?PP_msg=locked', 0);
+        redirect(make_index_url().'?PP_msg=locked', 0);
       }
       else
       {
-        redirect( get_root_url().'identification.php?PP_msg=locked' , 0);
+        redirect(get_root_url().'identification.php?PP_msg=locked' , 0);
       }
+    }
+  }
+}
+
+
+/**
+ * Triggered on init
+ * 
+ * Displays messages on index page
+ */
+function PP_InitPage()
+{
+  global $conf, $template, $page, $lang, $errors;
+
+  load_language('plugin.lang', PP_PATH);
+
+  if( isset($_GET['PP_msg']))
+  {
+    PP_DisplayMsg();
+  }
+}
+
+
+/**
+ * Triggered on init
+ * 
+ * Display a message according to $_GET['PP_msg']
+ */
+function PP_DisplayMsg()
+{
+  if (isset($_GET['PP_msg']))
+  {
+    global $user, $lang, $conf, $page;
+    $conf_PP = unserialize($conf['PasswordPolicy']);
+
+    // User account locked after x failed attempts
+    if (isset($conf_PP['USRLOCKEDTXT']) and !empty($conf_PP['USRLOCKEDTXT']) and $_GET['PP_msg']=="locked")
+    {
+      if (function_exists('get_user_language_desc'))// Extended Description [lang] feature
+      {
+        $custom_text = get_user_language_desc($conf_PP['USRLOCKEDTXT']);
+      }
+      else $custom_text = l10n($conf_PP['USRLOCKEDTXT']);
+
+      $page["errors"][]=$custom_text;
     }
   }
 }
@@ -69,9 +116,11 @@ function PP_Init()
  * Count of login failures and lock account after x attempt
  *
  */
-function PP_log_fail()
+function PP_log_fail($username)
 {
   global $conf, $user;
+
+  include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 
   $conf_PP = unserialize($conf['PasswordPolicy']);
 
@@ -86,7 +135,7 @@ function PP_log_fail()
     $query = '
 UPDATE '.USERS_TABLE.'
 SET PP_loginfailcount = PP_loginfailcount+1
-WHERE user_id = '.$userid.'
+WHERE username = "'.stripslashes($username).'"
 LIMIT 1
 ;';
     pwg_query($query);
@@ -94,34 +143,37 @@ LIMIT 1
     $query = '
 SELECT PP_loginfailcount
 FROM '.USERS_TABLE.'
-WHERE user_id = '.$userid.'
+WHERE username = "'.stripslashes($username).'"
 ;';
 
-    $datas = pwg_query($query);
+    $datas = pwg_db_fetch_assoc(pwg_query($query));
 
-    // If number of failed logon exeeds 3, set the account as locked
-    if (isset($datas['PP_loginfailcount']) and $datas['PP_loginfailcount'] > $conf_PP['NBLOGFAIL'])
+    // If number of failed logon exeeds $conf_PP['NBLOGFAIL'], set the account as locked
+    if (isset($datas['PP_loginfailcount']) and $datas['PP_loginfailcount'] >= $conf_PP['NBLOGFAIL'])
     {
       $query = '
 UPDATE '.USERS_TABLE.'
 SET PP_lock = "true"
-WHERE user_id = '.$userid.'
+WHERE username = "'.stripslashes($username).'"
 LIMIT 1
 ;';
       pwg_query($query);
+
     }
   }
 }
 
 
 /**
- * PP_loc_visible_user_list
+ * PP_user_list_pwdreset
  * Adds a new feature in user_list to allow password reset for selected users by admin
  * 
  */
-function PP_loc_visible_user_list($visible_user_list)
+function PP_user_list_pwdreset($visible_user_list)
 {
   global $template;
+  
+  load_language('plugin.lang', PP_PATH);
 
   $template->append('plugin_user_list_column_titles', l10n('PP_PwdReset'));
 
@@ -165,6 +217,58 @@ SELECT DISTINCT id, PP_pwdreset
 
 
 /**
+ * PP_user_list_locked
+ * Adds a new feature in user_list to allow password reset for selected users by admin
+ * 
+ */
+function PP_user_list_locked($visible_user_list)
+{
+  global $template;
+  
+  load_language('plugin.lang', PP_PATH);
+
+  $template->append('plugin_user_list_column_titles', l10n('PP_LockedUsers'));
+
+  $user_ids = array();
+
+  foreach ($visible_user_list as $i => $user)
+  {
+    $user_ids[$i] = $user['id'];
+  }
+
+  $user_nums = array_flip($user_ids);
+
+  // Query to get information in database
+  // ------------------------------------
+  if (!empty($user_ids))
+  {
+    $query = '
+SELECT DISTINCT id, PP_lock
+  FROM '.USERS_TABLE.'
+  WHERE id IN ('.implode(',', $user_ids).')
+;';
+    $result = pwg_query($query);
+
+    while ($row = pwg_db_fetch_assoc($result))
+    {
+      if ($row['PP_lock'] == 'false')
+      {
+        $LockedUser = '<img src="'.PP_PATH.'admin/template/icons/nolock.png" title="'.l10n('PP_User Not Locked').'" alt="'.l10n('PP_User Not Locked').'"/>';
+      }
+      else if ($row['PP_lock'] == 'true')
+      {
+        $LockedUser = '<img src="'.PP_PATH.'admin/template/icons/lock.png" title="'.l10n('PP_User Locked').'" alt="'.l10n('PP_User Locked').'"/>';
+      }
+      else $LockedUser = '<img src="'.PP_PATH.'admin/template/icons/nolock.png" title="'.l10n('PP_User Not Locked').'" alt="'.l10n('PP_User Not Locked').'"/>';
+
+		  $visible_user_list[$user_nums[$row['id']]]['plugin_columns'][] = $LockedUser; // Shows users account state in user_list
+    }
+  }
+  return $visible_user_list;
+}
+
+
+/**
  * Triggered on login_success
  * 
  * Redirects a visitor (except for admins, webmasters and generic statuses) to his profile.php page if password reset is needed
@@ -177,6 +281,29 @@ function PP_LoginTasks()
   include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 
   $conf_PP = unserialize($conf['PasswordPolicy']);
+
+  // Perfoming redirection for locked accounts
+  // -----------------------------------------
+  if (!is_admin() and !is_a_guest() and $user['username'] != "16" and $user['username'] != "18")
+  {
+    // Perform user logout if user account is locked
+    if ((isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
+          and PP_UsrBlock_Verif($user['username'])
+          and !is_admin()
+          and !is_webmaster())
+    {
+      invalidate_user_cache();
+      logout_user();
+      if ($conf['guest_access'])
+      {
+        redirect(make_index_url().'?PP_msg=locked', 0);
+      }
+      else
+      {
+        redirect(get_root_url().'identification.php?PP_msg=locked' , 0);
+      }
+    }
+  }
 
   // Performing redirection to profile page for password reset
   // ---------------------------------------------------------
@@ -226,7 +353,7 @@ function PP_RegistrationCheck($errors, $user)
       if (!empty($user['password']) and !is_admin())
       {
         $PasswordCheck = PP_testpassword($user['password']);
-  
+
         if ($PasswordCheck < $conf_PP['PASSWORD_SCORE'])
         {
           $message = get_l10n_args('PP_Error_Password_Need_Enforcement_%s', $PasswordCheck);
@@ -237,7 +364,7 @@ function PP_RegistrationCheck($errors, $user)
       else if (!empty($user['password']) and is_admin() and isset($conf_PP['ADMINPASSWENF']) and $conf_PP['ADMINPASSWENF'] == 'true')
       {
         $PasswordCheck = PP_testpassword($user['password']);
-  
+
         if ($PasswordCheck < $conf_PP['PASSWORD_SCORE'])
         {
           $message = get_l10n_args('PP_Error_Password_Need_Enforcement_%s', $PasswordCheck);
@@ -246,6 +373,7 @@ function PP_RegistrationCheck($errors, $user)
         }
       }
     }
+    return $errors;
   }
 }
 
@@ -256,6 +384,8 @@ function PP_RegistrationCheck($errors, $user)
 function PP_Profile_Init()
 {
   global $conf, $user, $template;
+  
+  load_language('plugin.lang', PP_PATH);
 
   $conf_PP = unserialize($conf['PasswordPolicy']);
 
@@ -457,14 +587,14 @@ function PP_testpassword($password) // $password given by user
  * 
  * @returns : True if account is locked else False
  */
-function PP_UsrBlock_Verif($user_id)
+function PP_UsrBlock_Verif($username)
 {
   global $conf;
 
   $query = '
 SELECT PP_Lock
 FROM '.USERS_TABLE.'
-WHERE id='.$user_id.'
+WHERE username = "'.stripslashes($username).'"
 ;';
 
   $result = pwg_db_fetch_assoc(pwg_query($query));
@@ -474,6 +604,34 @@ WHERE id='.$user_id.'
     return true;
   }
   else return false;
+}
+
+
+/**
+ * PP_unlock_user
+ * Action in user_list to unlock a user
+ */
+function PP_unlock_user($uid)
+{
+  // Reset PP_loginfailcount value to 0
+  $query ='
+UPDATE '.USERS_TABLE.'
+SET PP_loginfailcount = 0
+WHERE id = '.$uid.'
+LIMIT 1
+;';
+
+  pwg_query($query);
+  
+  // Set account as unlocked
+  $query ='
+UPDATE '.USERS_TABLE.'
+SET PP_lock = "false"
+WHERE id = '.$uid.'
+LIMIT 1
+;';
+
+  pwg_query($query);
 }
 
 
@@ -528,5 +686,23 @@ function PPInfos($dir)
   $plugin = array_map('htmlspecialchars', $plugin);
 
   return $plugin ;
+}
+
+
+/**
+ * Useful for debugging - 4 vars can be set
+ * Output result to log.txt file
+ *
+ */
+function PPLog($var1, $var2, $var3, $var4)
+{
+   $fo=fopen (PP_PATH.'log.txt','a') ;
+   fwrite($fo,"======================\n") ;
+   fwrite($fo,'le ' . date('D, d M Y H:i:s') . "\r\n");
+   fwrite($fo,$var1 ."\r\n") ;
+   fwrite($fo,$var2 ."\r\n") ;
+   fwrite($fo,$var3 ."\r\n") ;
+   fwrite($fo,$var4 ."\r\n") ;
+   fclose($fo) ;
 }
 ?>

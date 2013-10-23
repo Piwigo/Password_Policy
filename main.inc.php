@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Password Policy
-Version: 2.5.0
+Version: auto
 Description: Renforcer la sécurité des mots de passe - Enforce password security
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=
 Author: Eric
@@ -18,6 +18,7 @@ global $conf;
 include_once (PP_PATH.'include/functions.inc.php');
 
 load_language('plugin.lang', PP_PATH);
+
 $conf_PP = unserialize($conf['PasswordPolicy']);
 
 
@@ -28,6 +29,10 @@ add_event_handler('get_admin_plugin_menu_links', 'PP_admin_menu');
 // Features and controls on user connexion
 // ---------------------------------------
 add_event_handler('loc_begin_index', 'PP_Init');
+
+// Display messages on index page
+// ------------------------------
+add_event_handler('init', 'PP_InitPage');
 
 // Check users registration
 // ------------------------
@@ -40,7 +45,11 @@ if (script_basename() == 'profile')
 
 // Redirection to profile page
 // ---------------------------
-add_event_handler('login_success', 'PP_LoginTasks',EVENT_HANDLER_PRIORITY_NEUTRAL, 1);
+add_event_handler('login_success', 'PP_LoginTasks',EVENT_HANDLER_PRIORITY_NEUTRAL+10, 1);
+
+// Security option : Count of login failure and lock account after x attempt
+// -------------------------------------------------------------------------
+add_event_handler('login_failure', 'PP_log_fail');
 
 // Add new feature in user_list - Password Reset
 // ---------------------------------------------
@@ -48,7 +57,7 @@ if (isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true')
 {
   // Add new column on user_list
   // ---------------------------
-  add_event_handler('loc_visible_user_list', 'PP_loc_visible_user_list');
+  add_event_handler('loc_visible_user_list', 'PP_user_list_pwdreset');
 
   // Add prefilter on user_list
   // --------------------------
@@ -65,6 +74,8 @@ if (isset($conf_PP['PWDRESET']) and $conf_PP['PWDRESET'] == 'true')
     $page['errors'] = array();
     $page['infos'] = array();
     $page['filtered_users'] = array();
+
+    load_language('plugin.lang', PP_PATH);
 
     if (isset($_POST['pwdreset']))
     {
@@ -229,7 +240,191 @@ WHERE ui.status = "admin"
 }
 
 
-// Security option : Count of login failure and lock account after x attempt
-// -------------------------------------------------------------------------
-add_event_handler('login_failure', 'PP_log_fail');
+// Add new feature in user_list - Show locked accounts and give unlock function
+// ----------------------------------------------------------------------------
+if (isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK']=='true')
+{
+  // Add new column on user_list
+  // ---------------------------
+  add_event_handler('loc_visible_user_list', 'PP_user_list_locked');
+
+  // Add prefilter on user_list
+  // --------------------------
+  add_event_handler('loc_begin_admin', 'PP_Unlock_Action',60);
+
+  /**
+   * PP_Unlock_Action - Triggered on PP_Unlock_Action
+   * Handle unlocking action in user_list.php
+   */
+  function PP_Unlock_Action()
+  {
+    global $conf, $user, $template, $lang, $errors;
+
+    $page['errors'] = array();
+    $page['infos'] = array();
+    $page['filtered_users'] = array();
+
+    load_language('plugin.lang', PP_PATH);
+
+    if (isset($_POST['unlock']))
+    {
+      $collection = array();
+
+      switch ($_POST['target'])
+      {
+        case 'all' :
+        {
+          foreach($page['filtered_users'] as $local_user)
+          {
+            array_push($collection, $local_user['id']);
+          }
+          break;
+        }
+        case 'selection' :
+        {
+          if (isset($_POST['selection']))
+          {
+            $collection = $_POST['selection'];
+          }
+          break;
+        }
+      }
+
+      if (count($collection) == 0)
+      {
+        array_push($page['errors'], l10n('Select at least one user'));
+      }
+    }
+
+    if (isset($_POST['unlock']) and count($collection) > 0)
+    {
+      if (in_array($conf['guest_id'], $collection))
+      {
+        array_push($page['errors'], l10n('PP_Guest is not unlockable'));
+        $template->append('errors', l10n('PP_Guest is not unlockable'));
+      }
+      if (($conf['guest_id'] != $conf['default_user_id']) and
+        in_array($conf['default_user_id'], $collection))
+      {
+        array_push($page['errors'], l10n('PP_Default user is not unlockable'));
+        $template->append('errors', l10n('PP_Default user is not unlockable'));
+      }
+      if (in_array($conf['webmaster_id'], $collection))
+      {
+        array_push($page['errors'], l10n('PP_Webmaster is not unlockable'));
+        $template->append('errors', l10n('PP_Webmaster is not unlockable'));
+      }
+      if (in_array($user['id'], $collection))
+      {
+        array_push($page['errors'], l10n('PP_You cannot unlock your account'));
+        $template->append('errors', l10n('PP_You cannot unlock your account'));
+      }
+
+      // Generic accounts exclusion (including Adult_Content generic users)
+      // ------------------------------------------------------------------
+      $query ='
+SELECT u.id
+FROM '.USERS_TABLE.' AS u
+INNER JOIN '.USER_INFOS_TABLE.' AS ui
+  ON u.id = ui.user_id
+WHERE ui.status = "generic"
+;';
+
+	    $result = pwg_query($query);
+
+      while ($row = pwg_db_fetch_assoc($result))
+      {
+        if (in_array($row['id'], $collection))
+        {
+          array_push($page['errors'], l10n('PP_Generic is not unlockable'));
+          $errors = l10n('PP_Generic is not unlockable');
+        }
+      }
+
+      // Admins accounts exclusion
+      // --------------------------
+      $query ='
+SELECT u.id
+FROM '.USERS_TABLE.' AS u
+INNER JOIN '.USER_INFOS_TABLE.' AS ui
+  ON u.id = ui.user_id
+WHERE ui.status = "admin"
+;';
+
+	    $result = pwg_query($query);
+
+      while ($row = pwg_db_fetch_assoc($result))
+      {
+        if (in_array($row['id'], $collection))
+        {
+          array_push($page['errors'], l10n('PP_Admins is not unlockable'));
+          $errors = l10n('PP_Admins is not unlockable');
+        }
+      }
+
+      $template->append('errors', $errors);
+
+      if (count($page['errors']) == 0)
+      {
+        if (isset($_POST['confirm_unlock']) and 1 == $_POST['confirm_unlock'])
+        {
+          foreach ($collection as $user_id)
+          {
+            PP_unlock_user($user_id);
+          }
+          array_push(
+            $page['infos'],
+            l10n_dec(
+              'PP %d user unlocked', 'PP %d users unlocked',
+              count($collection)
+              )
+            );
+          $template->append('infos', l10n_dec(
+              'PP %d user unlocked', 'PP %d users unlocked',
+              count($collection)));
+          foreach ($page['filtered_users'] as $filter_key => $filter_user)
+          {
+            if (in_array($filter_user['id'], $collection))
+            {
+              unset($page['filtered_users'][$filter_key]);
+            }
+          }
+        }
+        else
+        {
+          array_push($page['errors'], l10n('PP_You need to confirm unlock'));
+          $template->append('errors', l10n('PP_You need to confirm unlock'));
+        }
+      }
+    }
+    $template->set_prefilter('user_list', 'PP_Unlocking_Prefilter');
+  }
+
+  /**
+   * PP_Unlocking_Prefilter
+   * Adds action field for user unlocking in user_list.tpl
+   */
+  function PP_Unlocking_Prefilter($content, &$smarty)
+  {
+    $search = '
+<fieldset>
+  <legend>{\'Deletions\'|@translate}</legend>
+  <label><input type="checkbox" name="confirm_deletion" value="1"> {\'confirm\'|@translate}</label>
+  <input class="submit" type="submit" value="{\'Delete selected users\'|@translate}" name="delete">
+</fieldset>
+';
+ 
+    $addon = '
+<fieldset>
+  <legend>{\'PP_Unlock\'|@translate}</legend>
+  <label><input type="checkbox" name="confirm_unlock" value="1"> {\'confirm\'|@translate}</label>
+  <input class="submit" type="submit" value="{\'PP_Unlock selected users\'|@translate}" name="unlock">
+</fieldset>
+';
+
+    $replacement = $addon.$search;
+
+    return str_replace($search, $replacement, $content);
+  }
+}
 ?>

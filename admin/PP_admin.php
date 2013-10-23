@@ -33,8 +33,34 @@ $plugin =  PPInfos(PP_PATH);
 $version = $plugin['version'];
 
 
-  if (isset($_POST['submit']) and isset($_POST['PP_Password_Enforced']) and isset($_POST['PP_AdminPassword_Enforced']) and isset($_POST['PP_PwdReset']))
+// +----------------------------------------------------------+
+// |            FCK Editor for email text fields              |
+// +----------------------------------------------------------+
+$toolbar = 'Basic';
+$width = '750px';
+$height = '300px';
+$areas = array();
+array_push($areas,'PP_CustomLockMsg');
+
+if (function_exists('set_fckeditor_instance'))
+{
+  $fcke_config = unserialize($conf['FCKEditor']);
+  foreach($areas as $area)
   {
+    if (!isset($fcke_config[$area]))
+    {
+      $fcke_config[$area] = false;
+    }
+  }
+  $conf['FCKEditor'] = serialize($fcke_config);
+
+  set_fckeditor_instance($areas, $toolbar, $width, $height);
+}
+
+
+  if (isset($_POST['submit']) and isset($_POST['PP_Password_Enforced']) and isset($_POST['PP_AdminPassword_Enforced']) and isset($_POST['PP_PwdReset']) and isset($_POST['PP_LogFailedPassw']))
+  {
+    $_POST['PP_CustomLockMsg'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['PP_CustomLockMsg'])));
     // Save global PP configuration
     // -----------------------------
     $newconf_PP['PPVersion'] = $version;
@@ -42,6 +68,9 @@ $version = $plugin['version'];
     $newconf_PP['PASSWORD_SCORE'] = (isset($_POST['PP_Password_Score']) ? $_POST['PP_Password_Score'] : '100');
     $newconf_PP['ADMINPASSWENF'] = (isset($_POST['PP_AdminPassword_Enforced']) ? $_POST['PP_AdminPassword_Enforced'] : 'false');
     $newconf_PP['PWDRESET'] = (isset($_POST['PP_PwdReset']) ? $_POST['PP_PwdReset'] : 'false');
+    $newconf_PP['LOGFAILBLOCK'] = (isset($_POST['PP_LogFailedPassw']) ? $_POST['PP_LogFailedPassw'] : 'false');
+    $newconf_PP['NBLOGFAIL'] = (isset($_POST['PP_NbFailedPassw']) ? $_POST['PP_NbFailedPassw'] : '0');
+    $newconf_PP['USRLOCKEDTXT'] = (isset($_POST['PP_CustomLockMsg']) ? $_POST['PP_CustomLockMsg'] : l10n('PP_User_Account_Locked_Txt'));
 
     $conf['PasswordPolicy'] = serialize($newconf_PP);
 
@@ -81,6 +110,10 @@ $version = $plugin['version'];
             'PP_PWDRESET_TRUE'                 => $conf_PP['PWDRESET']=='true' ? 'checked="checked"' : '' ,
             'PP_PWDRESET_FALSE'                => $conf_PP['PWDRESET']=='false' ? 'checked="checked"' : '' ,
 						'PP_PASSWORD_TEST_SCORE'           => $PP_Password_Test_Score,
+            'PP_LOGFAILEDPASSW_TRUE'           => $conf_PP['LOGFAILBLOCK']=='true' ? 'checked="checked"' : '' ,
+            'PP_LOGFAILEDPASSW_FALSE'          => $conf_PP['LOGFAILBLOCK']=='false' ? 'checked="checked"' : '' ,
+            'PP_NBLOGFAIL'                     => $conf_PP['NBLOGFAIL'],
+            'PP_USRLOCKEDTXT'                  => $conf_PP['USRLOCKEDTXT']
     )
   );
 
