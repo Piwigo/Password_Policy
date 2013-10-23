@@ -46,4 +46,26 @@ Password in attesa di rinnovo: Una richiesta per una nuova password è stata ins
 - Password originale: La password originale scelta al momento della creazione dell\'account non è mai stata cambiata.<br>
 Webmaster, account generici e gli ospiti sono esclusi da questa funzione.<br>
 Questi utenti saranno automaticamente reindirizzati alla loro pagina di personalizzazione per ciascuna delle loro connessioni fino a quando hanno cambiato la propria password e un messaggio esplicito verrà visualizzato in questa pagina.';
+$lang['PP_LoginAttempts_d'] = 'Questa opzione consente la registrazione dei tentativi di accesso non riusciti per la galleria a causa di password non corretta e bloccare automaticamente l\'account utente in questione. Esso è stato progettato per contrastare eventuali tentativi di hacking, con l\'uso di dizionari di password.<br/><br/>
+<b style=&quot;color: red;&quot;>Webmaster, conti generici e ospiti sono esclusi da questa funzione.</b><br/><br/>
+Abilitandolo, sarai in grado di specificare il numero massimo di tentativi non riusciti consentiti prima del blocco e definire un messaggio personalizzato per l\'utente che ha il suo account bloccato. Questo messaggio viene visualizzato solo se l\'utente riesce ad identificarsi dopo il blocco.<br/><br/>
+Per sbloccare gli account, vai alla interfaccia di gestione utente della tua galleria. Troverai una nuova colonna che indica lo stato degli accounts rapresentato da un simbolo rosso (per l\'account bloccato) e verde (per acount sbloccato). Seleziona uno o più account per sbloccare e utilizza il pulsante di sblocco progettato per questo scopo.';
+$lang['PP_UserLocked_Custom_Txt_d'] = 'Qui è possibile modificare il testo del messaggio visualizzato per l\'utente il cui account è stato bloccato. Per utilizzare più lingue, puoi utilizzare i plugin Extended Description tag se è attivo.';
+$lang['PP_User_Account_Locked_Txt'] = 'Spiacente, per motivi di sicurezza l\'accesso alla galleria è stato bloccato a causa di troppi tentativi di accesso non riusciti. Questo può essere dovuto a un tentativo di attacco al tuo conto. Prego contatta l\'amministratore del sito per richiedere lo sblocco.';
+$lang['PP_You need to confirm unlock'] = 'Devi confermare lo sblocco (seleziona casella)!';
+$lang['PP_You cannot unlock your account'] = 'Non puoi sbloccare il tuo account';
+$lang['PP_Webmaster is not unlockable'] = 'Gli utenti webmaster non possono essere bloccati e non possono essere sbloccati';
+$lang['PP_UserLocked_Custom_Txt'] = 'Personalizzazione messaggio di informazione per l\'utente bloccato';
+$lang['PP_Unlock selected users'] = 'Sblocca gli utenti selezionati';
+$lang['PP_User Locked'] = 'Utenti bloccati';
+$lang['PP_User Not Locked'] = 'Utenti non bloccati';
+$lang['PP_Unlock'] = 'Sbloccato';
+$lang['PP_Max number of failed attempts_d'] = 'Il numero 0 disabilita il conteggio tentativi.';
+$lang['PP_Max number of failed attempts'] = 'Numero massimo di tentativi falliti:';
+$lang['PP_LoginAttempts'] = 'Gestione tentativi di accesso non riusciti';
+$lang['PP_LockedUsers'] = 'Stato blocco';
+$lang['PP_Guest is not unlockable'] = 'Gli utenti ospiti non possono essere bloccati e non possono essere sbloccati';
+$lang['PP_Generic is not unlockable'] = 'Gli utenti generici non possono essere bloccati e non possono essere sbloccati';
+$lang['PP_Default user is not unlockable'] = 'L\'utente predefinito non può essere bloccato e non può essere sbloccato';
+$lang['PP_Admins is not unlockable'] = 'Gli utenti amministratori non possono essere bloccati e non possono essere sbloccati';
 ?>
