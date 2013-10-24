@@ -89,4 +89,6 @@ Ved aktivering af funktionen, får man mulighed for at angive det maksimalt till
 For at låse konto op, går man til sit galleris brugerhåndteringsgrænseflade.  Dér er der en ny kolonne, som angiver kontostatus markeret med et rødt symbol (for låste konti) og et grønt (for ulåste konti). Vælg en eller flere konti, der skal låses op, og benyt oplåsningsknappen beregnet dertil.';
 $lang['PP_Max number of failed attempts'] = 'Maksimalt antal mislykkede logonforsøg:';
 $lang['PP_Max number of failed attempts_d'] = 'Tallet 0 deaktiverer optælling af logonforsøg.';
+$lang['PP %d user unlocked'] = '%d bruger oplåst';
+$lang['PP %d users unlocked'] = '%d brugere oplåst';
 ?>
