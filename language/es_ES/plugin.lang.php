@@ -46,4 +46,28 @@ $lang['PP_PwdResetTitle_d'] = 'Al habilitar esta opción, se agregará una nueva
 - Password Original:. La contraseña original elegido al crear la cuenta y que nunca ha sido requerido para una renovación <br>
 Webmaster, cuentas genéricas y su acompañante están excluidos de esta función. <br>
 Estos usuarios serán redirigidos automáticamente a su página de personalización en cada una de sus conexiones hasta que cambien su contraseña y un mensaje explícito se muestrara en esta página.';
+$lang['PP_You need to confirm unlock'] = 'Debe confirmar el desbloqueo (casilla de verificación)!';
+$lang['PP %d user unlocked'] = '%d usuario desbloqueado';
+$lang['PP %d users unlocked'] = '%d usuarios desbloqueados';
+$lang['PP_Admins is not unlockable'] = 'Los usuarios administradores no pueden ser bloqueados y no se pueden desbloquear';
+$lang['PP_Default user is not unlockable'] = 'Usuario por defecto no se puede bloquear y no se puede desbloquear';
+$lang['PP_Generic is not unlockable'] = 'Usuario genéricos no se pueden bloquear y no se pueden desbloquear';
+$lang['PP_Guest is not unlockable'] = 'Usuario invitados no se pueden bloquear y no se pueden desbloquear';
+$lang['PP_LockedUsers'] = 'Estado del bloqueo';
+$lang['PP_LoginAttempts'] = 'Gestión de los intentos fallidos de conexión';
+$lang['PP_LoginAttempts_d'] = 'Esta opción permite el registro de los intentos fallidos de conexión a la galería debido a una contraseña incorrecta y bloquear automáticamente la cuenta del usuario en cuestión. Está diseñado para contrarrestar posibles intentos de hacking con el uso de diccionarios de contraseñas.<br/><br/>
+<b style=&quot;color: red;&quot;>Webmaster, genéricos y cuentas de invitados están excluidos de esta función.</b><br/><br/>
+Al permitir, usted será capaz de especificar el número máximo de intentos fallidos permitidos antes del bloqueo y definir un mensaje personalizado al usuario que ha bloqueado su cuenta. Este mensaje sólo aparece si el usuario tiene éxito en la identificación después del bloqueo.<br/><br/>
+Para desbloquear las cuentas, vaya a la interfaz de gestión de usuarios para su galería. Usted encontrará una nueva columna que indica el estado de las cuentas simbolizados por un símbolo rojo (para la cuenta bloqueada) y verde (por cuenta desbloqueado). Seleccionar una o más cuentas para desbloquear y utilizar el botón de desbloqueo diseñado para este propósito.';
+$lang['PP_Max number of failed attempts'] = 'Número máximo de intentos fallidos:';
+$lang['PP_Max number of failed attempts_d'] = 'El número 0 desactiva el recuento de intentos.';
+$lang['PP_Unlock'] = 'Desbloquear';
+$lang['PP_Unlock selected users'] = 'Desbloquear los usuarios seleccionados';
+$lang['PP_User Locked'] = 'Usuario bloqueado';
+$lang['PP_User Not Locked'] = 'Usuario no bloqueado';
+$lang['PP_UserLocked_Custom_Txt'] = 'Personalizar el mensaje de información para el usuario bloqueado';
+$lang['PP_UserLocked_Custom_Txt_d'] = 'Aquí puede cambiar el texto del mensaje que se muestra al usuario cuya cuenta ha sido bloqueada. Para utilizar varios idiomas, puede utilizar la etiqueta Descripción ampliada del plugin si está activo.';
+$lang['PP_User_Account_Locked_Txt'] = 'Lo sentimos, por razones de seguridad el acceso a la galería ha sido bloqueado debido a demasiados intentos de conexión fallidos. Esto puede ser debido a un intento de hacking en su cuenta. Por favor, póngase en contacto con el administrador del sitio para solicitar el desbloqueo.';
+$lang['PP_Webmaster is not unlockable'] = 'Usuarios webmasters no pueden ser bloqueados y no se pueden desbloquear';
+$lang['PP_You cannot unlock your account'] = 'No puede bloquear su propia cuenta';
 ?>
