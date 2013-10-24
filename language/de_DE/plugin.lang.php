@@ -46,4 +46,20 @@ $lang['PP_PwdResetTitle_d'] = 'Das Aktivieren dieser Option wird eine neue Funkt
 - Original-Passwort: Das Original-Passwort an Account-Erstellung gewählt und hat noch nie für eine Erneuerung erforderlich gewesen.<br>
 Webmaster, generischen und Gast-Accounts sind von dieser Funktion ausgeschlossen.<br>
 Diese Benutzer werden automatisch auf ihre Anpassung an jeder Seite ihrer Verbindungen umgeleitet werden, bis sie ihr Passwort geändert und eine explizite Meldung auf dieser Seite angezeigt werden.';
+$lang['PP_Admins is not unlockable'] = 'Admin Benutzer können nicht gesperrt bzw. entsperrt werden';
+$lang['PP_LoginAttempts'] = 'Verwaltung der fehlerhaften Login Versuche';
+$lang['PP_LockedUsers'] = 'Lock Status';
+$lang['PP_Generic is not unlockable'] = 'Generische Benutzer können nicht gesperrt bzw. entsperrt werden';
+$lang['PP_You need to confirm unlock'] = 'Das Entsperren muss bestätigt werden (Kontrollbox)!';
+$lang['PP_You cannot unlock your account'] = 'Sie können sich nicht selber entsperren';
+$lang['PP_Webmaster is not unlockable'] = 'Webmaster Benutzer können nicht gesperrt bzw. entsperrt werden';
+$lang['PP_UserLocked_Custom_Txt'] = 'Anpassen der Meldung für gesperrte Benutzer';
+$lang['PP_Max number of failed attempts_d'] = '0 deaktiviert die Anzahl der Fehlversuche';
+$lang['PP_Max number of failed attempts'] = 'Maximale Anzahl Fehlversuche';
+$lang['PP_Guest is not unlockable'] = 'Gast Benutzer können nicht gesperrt bzw. entsperrt werden';
+$lang['PP_Default user is not unlockable'] = 'Satndard Benutzer können nicht gesperrt bzw. entsperrt werden';
+$lang['PP_Unlock'] = 'Entsperren';
+$lang['PP_Unlock selected users'] = 'Ausgewählte Benutzer entsperren';
+$lang['PP_User Not Locked'] = 'Benutzer nicht gesperrt';
+$lang['PP_User Locked'] = 'Benutzer gesperrt';
 ?>
