@@ -47,4 +47,5 @@ $lang['PP_PwdResetTitle_d'] = 'Iespējojot šo opciju Piwigo lietotāju pārvald
 - Sākotnējā parole: Sākotnējā parole izvēlēta pie konta izveidošanas un nav bijis pieprasījuma to atjaunot.<br>
 Webmaster, vispārējie un viesu konti ir izslēgti no šīs funcijas.<br>
 Šie lietotāji tiks automātiski novirzīti uz to pielāgošanas lapām katrā no to savienojumiem līdz tie nomainīs savu paroli un nepārprotama ziņa par to tiks parādīta šajā lapā.';
+$lang['PP_You cannot unlock your account'] = 'Jūs nevarat atbloķēt pats savu kontu';
 ?>
