@@ -29,8 +29,8 @@ $lang['PP_PasswordTest'] = 'Şifreyi dene:';
 $lang['PP_ScoreTest'] = 'Sonuç: ';
 $lang['PP_Error_Password_Mandatory'] = 'Güvenlik: Şifre zorunludur.';
 $lang['PP_Error_Password_Need_Enforcement_%s'] = 'Güvenlik: Kontorl sistemi seçilen şifreler için karmaşık bir kontorl mekanizması sağlar. Şifreniz çok basit (karakter sayısı=%s) Lütfen aşağıdaki kurallara dikkat ederek yeni bir şifre belirleyin: <br>
-- Harf ve rakam içermeli<br>
-- Büyük ve küçük harf içermeli<br>
+- Harf ve rakam kullanın<br>
+- Büyük ve küçük harf kullanın<br>
 - Uzunluğu arttırın (karakter uzunluğunu)<br>
 Yönetici tarafından belirlenmiş minimum şifre uzunluğu:';
 $lang['PP_Password_Enforced_true'] = 'Etkin. Minimum Puan:';
@@ -70,4 +70,11 @@ $lang['PP_Guest is not unlockable'] = 'Ziyaretçi kullanıcıları kilitlenemez 
 $lang['PP_Generic is not unlockable'] = 'Jenerik kullanıcı hesapları kilitlenemez ve kilitleri açılamaz';
 $lang['PP_Default user is not unlockable'] = 'Varsayılan kullanıcı hesabı kilitlenemez ve kilitleri açılamaz';
 $lang['PP_Admins is not unlockable'] = 'Yönetici hesapları kilitlenemez ve kilitleri açılamaz';
+$lang['PP_UserLocked_Custom_Txt_d'] = 'Hesabı kilitlenecek kullanıcılarda görüntülenecek mesajı buradan değiştirebilirsiniz. Çoklu dil kullanmak için, eğer aktif ise "Extended description" eklentisini kullanabilirsiniz.';
+$lang['PP_Support_txt'] = 'Bu eklentinin resmi desteği şu başlıkta verilmektedir: Piwigo forum:<br/><a href="http://piwigo.org/forum/viewtopic.php?id=22863" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=22863</a>';
+$lang['PP_User_Account_Locked_Txt'] = 'Üzgünüz ama, güvenlik kuralları gereği, çok fazla başarısız oturum açma girişiminiz sebebiyle galeriye erişiminiz kilitlendi. Bu durum, hesabınızda bir hack girişimi nedeniyle de olmuş olabilir. Kilidin açılması için site yöneticisine başvurun.';
+$lang['PP_passwadmTitle_d'] = 'Yönetici, karmaşıklık hesabı kuralını uygulayarak veya uygulamayarak bir kullanıcı hesabı yaratabilir.<br/><br/>
+Not: Eğer hesabı oluşturulan aktif kullanıcı şifresini değiştirip güçlendirmek istiyorsa, bu kural setine tabi olacaktır.';
+$lang['PP %d user unlocked'] = '%d kullanıcı kilidi açıldı';
+$lang['PP %d users unlocked'] = '%d kullanıcı kilidi açıldı';
 ?>
