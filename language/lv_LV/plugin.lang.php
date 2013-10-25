@@ -48,4 +48,14 @@ $lang['PP_PwdResetTitle_d'] = 'Iespējojot šo opciju Piwigo lietotāju pārvald
 Webmaster, vispārējie un viesu konti ir izslēgti no šīs funcijas.<br>
 Šie lietotāji tiks automātiski novirzīti uz to pielāgošanas lapām katrā no to savienojumiem līdz tie nomainīs savu paroli un nepārprotama ziņa par to tiks parādīta šajā lapā.';
 $lang['PP_You cannot unlock your account'] = 'Jūs nevarat atbloķēt pats savu kontu';
+$lang['PP_LoginAttempts'] = 'Neizdevušos pieteikšanās mēģinājumu pārvaldība';
+$lang['PP %d user unlocked'] = '%d lietotājs atbloķēts';
+$lang['PP %d users unlocked'] = '%d lietotāji atbloķēti';
+$lang['PP_LockedUsers'] = 'Bloķēšanas statuss';
+$lang['PP_Max number of failed attempts'] = 'Maksimālais neveiksmīgo mēģinājumu skaits:';
+$lang['PP_Unlock'] = 'Atbloķēšana';
+$lang['PP_Unlock selected users'] = 'Atbloķējiet izvēlētos lietotājus';
+$lang['PP_User Locked'] = 'Lietotājs ir bloķēts';
+$lang['PP_User Not Locked'] = 'Lietotājs nav bloķēts';
+$lang['PP_You need to confirm unlock'] = 'Jums ir jāapstiprina atbloķēšanu (atzīmējiet)!';
 ?>
