@@ -62,4 +62,7 @@ $lang['PP_Unlock'] = 'Entsperren';
 $lang['PP_Unlock selected users'] = 'Ausgewählte Benutzer entsperren';
 $lang['PP_User Not Locked'] = 'Benutzer nicht gesperrt';
 $lang['PP_User Locked'] = 'Benutzer gesperrt';
+$lang['PP %d user unlocked'] = '%d Benutzer freigeschaltet';
+$lang['PP %d users unlocked'] = '%d Benutzer freigeschaltet';
+$lang['PP_User_Account_Locked_Txt'] = 'Entschuldigung, aus Sicherheitsgründen Ihren Zugang zur Galerie wurde gesperrt aufgrund zu vieler fehlgeschlagener Anmeldeversuche. Dies kann aufgrund auf eine Hacker versuchen auf Ihrem Konto. Bitte wenden Sie sich an den Administrator, um die Entriegelung zu beantragen.';
 ?>
