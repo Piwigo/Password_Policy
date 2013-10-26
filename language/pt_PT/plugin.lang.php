@@ -86,4 +86,15 @@ $lang['PP_User Not Locked'] = 'Utilizador não bloqueado';
 $lang['PP_UserLocked_Custom_Txt'] = 'Personalização da mensagem informativa para o utilizador bloqueado';
 $lang['PP_UserLocked_Custom_Txt_d'] = 'Aqui você pode alterar o texto da mensagem exibida ao utilizador cuja conta foi bloqueada. Para usar vários idiomas, pode usar a  descrição extensa das etiquetas das extensões se ativa.';
 $lang['PP_User_Account_Locked_Txt'] = 'Desculpe, por motivo de segurança o seu acesso à galeria foi bloqueado devido a multiplas tentativas de entrada. Isto pode ser devido a uma tentativa de invasão da sua conta. Por favor, contate o administrador do site para solicitar o desbloqueio.';
+$lang['PP_passwTitle_d'] = '
+Ativando esta opção torna obrigatório uma senha no momento do registo, e requer que a senha escolhida pelo visitante tenha um nível mínimo de complexidade. Se o limite não for atingido, a pontuação obtida e a pontuação mínima permitida, são exibidas, juntamente com a recomendação de aumento do valor da pontuação. <br/><br/>
+Existe campo de teste para medir a complexidade de uma senha, e pode forçar uma pontuação personalizada para definir a complexidade.<br/><br/>
+Nota: A pontuação de uma senha é calculada com base em vários parâmetros: comprimento, tipo de caracteres utilizados (letras, números, letras maiúsculas, minúsculas, caracteres especiais). Uma pontuação abaixo de 100 é considerada baixa, de 100 a 500, a complexidade é média, além de 500, a segurança é excelente.
+
+
+
+
+';
+$lang['PP_passwadmTitle_d'] = 'Um administrador pode criar uma conta de utilizador com ou sem a aplicação da regra de complexidade. <br/>
+Nota: Se, após a conta de utilizador criada, quiser alterar a senha e o verificador de senhas de utilizadores estiver ativo, ficará sujeito ao conjunto de regras.';
 ?>
