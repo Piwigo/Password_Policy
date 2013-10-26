@@ -68,4 +68,6 @@ $lang['PP_Guest is not unlockable'] = 'Gli utenti ospiti non possono essere bloc
 $lang['PP_Generic is not unlockable'] = 'Gli utenti generici non possono essere bloccati e non possono essere sbloccati';
 $lang['PP_Default user is not unlockable'] = 'L\'utente predefinito non può essere bloccato e non può essere sbloccato';
 $lang['PP_Admins is not unlockable'] = 'Gli utenti amministratori non possono essere bloccati e non possono essere sbloccati';
+$lang['PP %d users unlocked'] = '%d utenti sbloccati';
+$lang['PP %d user unlocked'] = '%d utente sbloccato';
 ?>
