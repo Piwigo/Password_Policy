@@ -58,4 +58,5 @@ $lang['PP_Unlock selected users'] = 'Atbloķējiet izvēlētos lietotājus';
 $lang['PP_User Locked'] = 'Lietotājs ir bloķēts';
 $lang['PP_User Not Locked'] = 'Lietotājs nav bloķēts';
 $lang['PP_You need to confirm unlock'] = 'Jums ir jāapstiprina atbloķēšanu (atzīmējiet)!';
+$lang['PP_Admins is not unlockable'] = 'Admin lietotājus nevar bloķēt un atbloķēt';
 ?>
