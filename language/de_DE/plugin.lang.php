@@ -65,4 +65,10 @@ $lang['PP_User Locked'] = 'Benutzer gesperrt';
 $lang['PP %d user unlocked'] = '%d Benutzer freigeschaltet';
 $lang['PP %d users unlocked'] = '%d Benutzer freigeschaltet';
 $lang['PP_User_Account_Locked_Txt'] = 'Entschuldigung, aus Sicherheitsgründen Ihren Zugang zur Galerie wurde gesperrt aufgrund zu vieler fehlgeschlagener Anmeldeversuche. Dies kann aufgrund auf eine Hacker versuchen auf Ihrem Konto. Bitte wenden Sie sich an den Administrator, um die Entriegelung zu beantragen.';
+$lang['PP_LoginAttempts_d'] = 'Durch Aktivierung dieser Option starten Sie eine Protokollierung von Login-Fehlversuchen zu Ihrem Account und erhalten die Möglichkeit diesen zu blockieren, wenn z.B. versucht wird mit Hilfe von Passwort Bibliotheken diesen zu hacken..<br/><br/>
+<b style=&quot;color: red;&quot;>Webmaster, generische und Gast-Accounts sind von dieser Funktion ausgeschlossen.</b><br/><br/>
+Die maximale Anzahl von Fehlversuchen vor dem Blockieren kann festgelegt werden. Es ist auch möglich ein Meldung einzugeben, die nur angezeigt wird, wenn sich ein Benutzer an einem blockierten Account mit richtigem Passwort anmeldet.<br/><br/>
+Das Freischalten eines Accounts erfolgt über das Management Interface der Gallerie. Sie sehen dort eine neue Spalte mit Lock-Informationen. Ein rotes Symbol zeigt einen blockierten Account, ein grünes Symbol einen freien. Die Accounts können ausgewählt und mit dem "Freischalten"-Button wieder freigeschaltet werden.
+';
+$lang['PP_UserLocked_Custom_Txt_d'] = 'Hier können Sie eine Meldung eingeben, die angezeigt wird, wenn ein Benutzer versucht, sich mit richtigem Passwort an einem blockierten Account anzumelden. Mehrsprachigkeit ist mit Extended description plugin tags möglich, wenn diese aktiviert sind.';
 ?>
