@@ -59,4 +59,10 @@ $lang['PP_User Locked'] = 'Lietotājs ir bloķēts';
 $lang['PP_User Not Locked'] = 'Lietotājs nav bloķēts';
 $lang['PP_You need to confirm unlock'] = 'Jums ir jāapstiprina atbloķēšanu (atzīmējiet)!';
 $lang['PP_Admins is not unlockable'] = 'Admin lietotājus nevar bloķēt un atbloķēt';
+$lang['PP_Default user is not unlockable'] = 'Noklusējuma lietotājs nevar tikt bloķēts un arī atbloķēts';
+$lang['PP_Webmaster is not unlockable'] = 'Vebmastera lietotāji nevar tikt bloķēti un arī atbloķēti';
+$lang['PP_UserLocked_Custom_Txt'] = 'Pielāgot bloķētam lietotājam nododamo informāciju';
+$lang['PP_Max number of failed attempts_d'] = 'Skaitlis 0 atslēdz skaitīšanas mēģinājumus.';
+$lang['PP_Guest is not unlockable'] = 'Vieslietotāji nevar tikt bloķēti un arī atbloķēti';
+$lang['PP_Generic is not unlockable'] = 'Vispārējie lietotāji nevar tikt bloķēti un arī atbloķēti';
 ?>
