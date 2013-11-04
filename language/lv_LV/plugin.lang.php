@@ -65,4 +65,7 @@ $lang['PP_UserLocked_Custom_Txt'] = 'Pielāgot bloķētam lietotājam nododamo i
 $lang['PP_Max number of failed attempts_d'] = 'Skaitlis 0 atslēdz skaitīšanas mēģinājumus.';
 $lang['PP_Guest is not unlockable'] = 'Vieslietotāji nevar tikt bloķēti un arī atbloķēti';
 $lang['PP_Generic is not unlockable'] = 'Vispārējie lietotāji nevar tikt bloķēti un arī atbloķēti';
+$lang['PP_UserLocked_Custom_Txt_d'] = '
+Šeit jūs varat izmainīt ziņas tekstu, kas tiks attēlots lietotājam, kura konts ir bloķēts. Lai izmantotu vairākas valodas, jūs varat izmantot Extended description spraudņa tagu, ja tas ir aktīvs.';
+$lang['PP_User_Account_Locked_Txt'] = 'Avainojiet, sakarā ar parāk daudziem nrvrikdmīgirm piekļūves mēģinājumiem jūsu gelerijai, drošības iemeslu dēļ jūsu piekļuve tai ir bloķēta. Tas var būt saistīts ar hakeru uzbrukumu jūsu kontam. Lūdzu sazinieties ar vietnes administratoru, lai  atbloķētu galeriju.';
 ?>
