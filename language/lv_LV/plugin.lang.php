@@ -68,4 +68,8 @@ $lang['PP_Generic is not unlockable'] = 'Vispārējie lietotāji nevar tikt blo�
 $lang['PP_UserLocked_Custom_Txt_d'] = '
 Šeit jūs varat izmainīt ziņas tekstu, kas tiks attēlots lietotājam, kura konts ir bloķēts. Lai izmantotu vairākas valodas, jūs varat izmantot Extended description spraudņa tagu, ja tas ir aktīvs.';
 $lang['PP_User_Account_Locked_Txt'] = 'Avainojiet, sakarā ar parāk daudziem nrvrikdmīgirm piekļūves mēģinājumiem jūsu gelerijai, drošības iemeslu dēļ jūsu piekļuve tai ir bloķēta. Tas var būt saistīts ar hakeru uzbrukumu jūsu kontam. Lūdzu sazinieties ar vietnes administratoru, lai  atbloķētu galeriju.';
+$lang['PP_LoginAttempts_d'] = 'Šī opcija ļauj reģistrēt neizdevušos pieteikšanās mēģinājumus galerijai nepareizu paroļu gadījumā un automātiski bloķēt attiecīgā lietotāja kontu. Tā ir izstrādāta, lai novērstu iespējamos hakeru mēģinājumus, izmantojot parolļu vārdnīcas <br/> <br/>.
+<b style=&quot;color: red;&quot;>Vebmastera, vispārīgie un viesu konti ir izslēgti no šīs funkcijas.</b><br/><br/>
+Iespējojot, jums būs iespēja noteikt maksimālo neveiksmīgo mēģinājumu skaitu, kas atļauti pirms konta bloķēšanas un ļauj definēt pielāgotu ziņojumu uz lietotājam, kurš ir bloķējis viņa kontu. Šis ziņojums tiek parādīts tikai tad, ja pēc bloķēšanas izdodas identificēt lietotāju<br/><br/>.
+Lai atbloķētu kontus, dodieties uz lietotāju pārvaldības interfeisu savā galerijā. Jūs atradīsiet jaunu kolonnu, kas norāda kontu statusu iezīmētu ar sarkanu simbolu (par bloķētu kontu) un zaļā (par atbloķētu kontu). Izvēlieties vienu vai vairākus kontus, lai atbloķētu, izmantojot atslēgšanas pogu paredzētu šim nolūkam.';
 ?>
