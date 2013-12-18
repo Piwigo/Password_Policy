@@ -77,4 +77,17 @@ $lang['PP_passwadmTitle_d'] = 'Yönetici, karmaşıklık hesabı kuralını uygu
 Not: Eğer hesabı oluşturulan aktif kullanıcı şifresini değiştirip güçlendirmek istiyorsa, bu kural setine tabi olacaktır.';
 $lang['PP %d user unlocked'] = '%d kullanıcı kilidi açıldı';
 $lang['PP %d users unlocked'] = '%d kullanıcı kilidi açıldı';
+$lang['PP_passwTitle_d'] = 'Bu seçeneğin etkinleştirilmesi parola kaydı üzerine nöbet zorunlu kılan ve karmaşıklık minimum düzeyde karşılamak için ziyaretçi tarafından seçilen parola gerektirir. Eşik ulaşmak değil, skor elde ve en düşük puanın elde edilebilir, bu sayı değerini artırmak için öneriler ile birlikte görüntülenir. <br/> <br/>
+Orada alan bir parola karmaşıklığı ölçmek için test ve karmaşık özel tanımlamak için skor bir fikir edinmek Ödeyebileceğinizden. <br/> <br/>
+Not: Parola puanı temel hesaplanır çeşitli parametreler: uzunluğu, karakter (harf, rakam, büyük harf, küçük harf, özel karakterler) türü. Aşağıda 100 puan 100 ile 500 arasında düşük olarak kabul edilir, karmaşıklık ortalama; 500, güvenlik mükemmel.';
+$lang['PP_PwdResetTitle_d'] = 'Bu seçeneği etkinleştirmek Piwigo\'nın kullanıcı yönetim panelinde yeni bir özellik eklemek olacaktır (kullanıcılar > Yönet), seçili kullanıcı için parola yenilemek için geçerli olabilir. Ayrıca, her biri aşağıdaki değerleri için parolaları durumunu göstermek için yeni bir sütun eklenir: <br/> <br/>
+-Yenilenmesi için şifre: Şifre yenileme isteği planlanmıştır. <br/>
+-Yenilendi şifre: şifre isteği sonra yenilendi. <br/>
+-Original şifre: özgün parola hesap oluşturma seçilmiş bir yenilenmesi için gerekli olmamıştı. <br/> <br/>
+<b style="color: red;"> Webmaster, genel ve müşteri hesapları bu fonksiyondan dışlanır.</b> <br/> <br/>
+Bu kullanıcılar otomatik olarak onların özelleştirme sayfasını her onların bağlantıları kadar kendi şifresini değiştirdiler ve açık bir mesaj-ecek var olmak göstermek üstünde bu sayfa yönlendirileceksiniz.';
+$lang['PP_LoginAttempts_d'] = 'Bu seçenek, hatalı parola girişleri nedeniyle başarısız oturum açma girişimlerini kayıt altına almayı ve ilgili kullanıcı hesabını otomatik olarak kitlemeye olanak tanır. Parola sözlükler kullanımı ile olası kırma girişimlerine karşı tasarlanmıştır. <br/> <br/>
+<b style="color: red;"> Webmaster, genel ve ziyaretçi hesapları bu fonksiyondan hariç tutulmuştur.</b> <br/> <br/>
+Etkinleştirerek, kaç adet başarısız girişim sonrası hesabın kilitleneceğini belirtebilir ve kullanıcıya gönderilecek özel mesajı belirleyebilirsiniz. Bu mesaj ancak kullanıcı tanımlaması kilitleme sonra başarılı olursa görüntülenir.<br/> <br/>
+Hesapların kilidini açmak için, galerinizin kullanıcının yönetim arayüzüne gidin. Kırmızı (kilitli hesap) ve yeşil (açık hesap) sembol olarak hesapların durumunu gösteren yeni bir kolon eklendiğini göreceksiniz. Kilidi açmak için bir veya daha fazla hesabı seçerek kilidi aç sembolünü kullanın.';
 ?>
