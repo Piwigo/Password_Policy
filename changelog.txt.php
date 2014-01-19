@@ -16,6 +16,15 @@ Plugin Name: Password Policy
            Update pt_BR, thanks to : flaviove
            Update lv_LV, thanks to : agrisans
            Update es_ES, thanks to : jpr928
-           
+
+-- 2.5.3 : Update tr_TR, thanks to : LazBoy
+           Update de_DE, thanks to : bezz
+           Update lv_LV, thanks to : agrisans
+           Update el_GR, thanks to : bas_alba
+           Update pt_PT, thanks to : ANO
+           Update it_IT, thanks to : Ericnet
+           Update pl_PL, thanks to : T00kie
+           Update uk_UA, thanks to : animan
+
 */
 ?>
