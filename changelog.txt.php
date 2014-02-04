@@ -26,5 +26,8 @@ Plugin Name: Password Policy
            Update pl_PL, thanks to : T00kie
            Update uk_UA, thanks to : animan
 
+-- 2.6.0 : Piwigo 2.6 compatibility
+           Update nl_NL, thanks to : eijdenberg
+
 */
 ?>
