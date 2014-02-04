@@ -197,8 +197,6 @@ function PP_user_list_pwdreset($visible_user_list)
   
   load_language('plugin.lang', PP_PATH);
 
-  $template->append('plugin_user_list_column_titles', l10n('PP_PwdReset'));
-
   $user_ids = array();
 
   foreach ($visible_user_list as $i => $user)
@@ -595,6 +593,50 @@ LIMIT 1
 ;';
 
   pwg_query($query);
+}
+
+
+/**
+ * Function called from PP_admin.php - Get all users to display the number of days since their last visit
+ * 
+ * @return : List of users
+ * 
+ */
+function pp_get_user_list()
+{
+  global $conf, $page;
+
+  $users = array();
+
+  // Search users with exclusion of Adult_Content generic users and guest user
+  // -------------------------------------------------------------------------
+  $query = '
+SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
+                u.'.$conf['user_fields']['username'].' AS username,
+                u.'.$conf['user_fields']['email'].' AS email,
+                ui.status
+FROM '.USERS_TABLE.' AS u
+  INNER JOIN '.USER_INFOS_TABLE.' AS ui
+    ON u.'.$conf['user_fields']['id'].' = ui.user_id
+WHERE u.username NOT LIKE "16"
+  AND u.username NOT LIKE "18"
+;';
+
+  $result = pwg_query($query);
+      
+  while ($row = pwg_db_fetch_assoc($result))
+  {
+    $user = $row;
+    array_push($users, $user);
+  }
+
+  $user_ids = array();
+  foreach ($users as $i => $user)
+  {
+    $user_ids[$i] = $user['id'];
+  }
+
+  return $users;
 }
 
 

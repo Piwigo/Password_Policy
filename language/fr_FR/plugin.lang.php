@@ -70,4 +70,14 @@ $lang['PP_User Locked'] = 'Utilisateur verrouillé';
 $lang['PP_You need to confirm unlock'] = 'Vous devez confirmer le déverrouillage (case à cocher) !';
 $lang['PP %d user unlocked'] = '%d utilisateur déverrouillé';
 $lang['PP %d users unlocked'] = '%d utilisateurs déverrouillés';
+$lang['PP_config_tab'] = 'Configuration';
+$lang['PP_Users_List_Tab'] = 'Gestion';
+$lang['PP_Pwd_Actions'] = 'Gestion des utilisateurs';
+$lang['PP_Pwd_Actions_d'] = 'Les actions de renouvellement forcée des mots de passe et de déverrouillages de comptes se font ici.<br/><br/>
+Sélectionnez les utilisateurs avant d\'appliquer une action. De même, il est nécessaire de cocher la case de confirmation avant chaque action.<br/><br/>
+<b style=&quot;color: red;&quot;>Important :</b> Les actions ne s\'appliquent <u><b>QUE</b> sur les comptes visiteurs</u> et pas administrateurs, webmestre, par défaut et invité (guest).';
+$lang['PP_Err_Userlist_Settings'] = 'Cet onglet n\'est disponible que si le renouvellement du mots de passe ou la gestion des tentatives de connexion echouées est actif';
+$lang['PP_No_Userlist'] = 'Pas d\'utilisateurs à afficher';
+$lang['PP_Select page number'] = 'Sélectionnez le numéro de la page à afficher';
+$lang['PP_Select page size'] = 'Sélectionnez le nombre de lignes par pages';
 ?>

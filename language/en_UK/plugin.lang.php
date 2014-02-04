@@ -70,4 +70,14 @@ $lang['PP_User Locked'] = 'User locked';
 $lang['PP_You need to confirm unlock'] = 'You must confirm unlocking (check box)!';
 $lang['PP %d user unlocked'] = '%d user unlocked';
 $lang['PP %d users unlocked'] = '%d users unlocked';
+$lang['PP_config_tab'] = 'Configuration';
+$lang['PP_Users_List_Tab'] = 'Management';
+$lang['PP_Pwd_Actions'] = 'Users management';
+$lang['PP_Pwd_Actions_d'] = 'Unlocking accounts and password renewal requests are set here.<br/><br/>
+Select users before set an action. Confirmation checkbox is mandatory before applying any action.<br/><br/>
+<b style=&quot;color: red;&quot;>Important :</b> Actions apply <u><b>ONLY</b> on visitor accounts</u> and not administrators, webmaster, default and guest.';
+$lang['PP_Err_Userlist_Settings'] = 'This tab is available only if password renewal or unlocking accounts is enabled';
+$lang['PP_No_Userlist'] = 'No users available to display';
+$lang['PP_Select page number'] = 'Select page number to display';
+$lang['PP_Select page size'] = 'Select page size';
 ?>
