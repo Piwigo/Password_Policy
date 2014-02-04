@@ -71,4 +71,14 @@ Die maximale Anzahl von Fehlversuchen vor dem Blockieren kann festgelegt werden.
 Das Freischalten eines Accounts erfolgt über das Management Interface der Gallerie. Sie sehen dort eine neue Spalte mit Lock-Informationen. Ein rotes Symbol zeigt einen blockierten Account, ein grünes Symbol einen freien. Die Accounts können ausgewählt und mit dem "Freischalten"-Button wieder freigeschaltet werden.
 ';
 $lang['PP_UserLocked_Custom_Txt_d'] = 'Hier können Sie eine Meldung eingeben, die angezeigt wird, wenn ein Benutzer versucht, sich mit richtigem Passwort an einem blockierten Account anzumelden. Mehrsprachigkeit ist mit Extended description plugin tags möglich, wenn diese aktiviert sind.';
+$lang['PP_Err_Userlist_Settings'] = 'Diese Tab ist nur verfügbar, wenn Passworterneuerung oder Kontoentsperrung aktiviert sind.';
+$lang['PP_No_Userlist'] = 'Kein Benutzer zum Anzeigen verfügbar';
+$lang['PP_Pwd_Actions'] = 'Benutzerverwaltung';
+$lang['PP_Pwd_Actions_d'] = 'Kontoentsperrungs- und Passworterneuerungsanfragen werden hier gesetzt.<br/><br/>
+Wähle Benutzer aus, bevor Du eine Aktion auswählst. Die Bestätigungscheckbox ist verpflichtend, bevor eine Aktion ausgeführt wird.<br/><br/>
+<b style=&quot;color: red;&quot;>Wichtig :</b>Aktionen werden <u><b>NUR</b> auf Besucherkonten</u> und nicht auf Administrator-, Webmaster-, Standard- und Gastkonten angewendet.';
+$lang['PP_Select page number'] = 'Wähle die anzuzeigende Seitennummer';
+$lang['PP_Select page size'] = 'Wähle die Seitengröße';
+$lang['PP_Users_List_Tab'] = 'Verwaltung';
+$lang['PP_config_tab'] = 'Konfiguration';
 ?>
