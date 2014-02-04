@@ -70,4 +70,5 @@ $lang['PP_UserLocked_Custom_Txt_d'] = 'Aquí puede cambiar el texto del mensaje 
 $lang['PP_User_Account_Locked_Txt'] = 'Lo sentimos, por razones de seguridad el acceso a la galería ha sido bloqueado debido a demasiados intentos de conexión fallidos. Esto puede ser debido a un intento de hacking en su cuenta. Por favor, póngase en contacto con el administrador del sitio para solicitar el desbloqueo.';
 $lang['PP_Webmaster is not unlockable'] = 'Usuarios webmasters no pueden ser bloqueados y no se pueden desbloquear';
 $lang['PP_You cannot unlock your account'] = 'No puede bloquear su propia cuenta';
+$lang['PP_Err_Userlist_Settings'] = 'Esta ficha sólo está disponible si la renovación de contraseñas o cuentas de desbloqueo está activado';
 ?>
