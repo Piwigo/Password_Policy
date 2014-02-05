@@ -75,4 +75,11 @@ Lai atbloķētu kontus, dodieties uz lietotāju pārvaldības interfeisu savā g
 $lang['PP_Select page number'] = 'Izvēlēties attēlojamās lapas numuru ';
 $lang['PP_config_tab'] = 'Konfigurācija';
 $lang['PP_Select page size'] = 'Izvēlēties lapas izmēru';
+$lang['PP_Pwd_Actions_d'] = 'Atslēdzamo kontu un paroles atjaunošanas pieprasījumi ir pieejami šeit. <br/> <br/> Izvēlieties lietotājus pirms veikt darbību. Apstiprinājuma rūtiņas atzīme ir obligāta pirms jebkādas darbības veikšanas. <br/> <br/> <b style=&quot;color: red;&quot;> Svarīgi: </ b> Darbības piemērot <u> <b> TIKAI </ b>apmeklētāju kontiem </ u> un nevis administratoru, webmaster, noklusējuma un viesu kontiem.
+
+';
+$lang['PP_Err_Userlist_Settings'] = 'Šī cilne ir pieejama tikai tad, ja paroles atjaunošana vai atslēdzamie konti ir iespējoti';
+$lang['PP_Users_List_Tab'] = 'Pārvaldība';
+$lang['PP_No_Userlist'] = 'Nav lietotāju, ko parādīt ';
+$lang['PP_Pwd_Actions'] = 'Lietotāju pārvaldība';
 ?>
