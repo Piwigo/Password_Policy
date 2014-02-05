@@ -72,4 +72,7 @@ $lang['PP_LoginAttempts_d'] = 'Šī opcija ļauj reģistrēt neizdevušos pietei
 <b style=&quot;color: red;&quot;>Vebmastera, vispārīgie un viesu konti ir izslēgti no šīs funkcijas.</b><br/><br/>
 Iespējojot, jums būs iespēja noteikt maksimālo neveiksmīgo mēģinājumu skaitu, kas atļauti pirms konta bloķēšanas un ļauj definēt pielāgotu ziņojumu uz lietotājam, kurš ir bloķējis viņa kontu. Šis ziņojums tiek parādīts tikai tad, ja pēc bloķēšanas izdodas identificēt lietotāju<br/><br/>.
 Lai atbloķētu kontus, dodieties uz lietotāju pārvaldības interfeisu savā galerijā. Jūs atradīsiet jaunu kolonnu, kas norāda kontu statusu iezīmētu ar sarkanu simbolu (par bloķētu kontu) un zaļā (par atbloķētu kontu). Izvēlieties vienu vai vairākus kontus, lai atbloķētu, izmantojot atslēgšanas pogu paredzētu šim nolūkam.';
+$lang['PP_Select page number'] = 'Izvēlēties attēlojamās lapas numuru ';
+$lang['PP_config_tab'] = 'Konfigurācija';
+$lang['PP_Select page size'] = 'Izvēlēties lapas izmēru';
 ?>
