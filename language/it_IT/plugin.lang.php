@@ -70,4 +70,14 @@ $lang['PP_Default user is not unlockable'] = 'L\'utente predefinito non può ess
 $lang['PP_Admins is not unlockable'] = 'Gli utenti amministratori non possono essere bloccati e non possono essere sbloccati';
 $lang['PP %d users unlocked'] = '%d utenti sbloccati';
 $lang['PP %d user unlocked'] = '%d utente sbloccato';
+$lang['PP_Pwd_Actions_d'] = 'Richieste sblocco account e rinnovo password vanno impostate qui. <br/><br/>
+Seleziona gli utenti prima di impostare un\'azione. Casella di controllo conferma è obbligatoria prima di applicare qualsiasi azione.<br/><br/>
+<b style=&quot;color: red;&quot;>Importante:</b> Le azioni si applicano <u><b>SOLO</b> sugli account del visitatore</u> e non sugli amministratori, webmaster, predefinito e ospite.';
+$lang['PP_Err_Userlist_Settings'] = 'Questa scheda è disponibile solo se è abilitato rinnovo password o sblocco account';
+$lang['PP_Select page number'] = 'Seleziona il numero di pagina da visualizzare';
+$lang['PP_Users_List_Tab'] = 'Gestione';
+$lang['PP_config_tab'] = 'Configurazione';
+$lang['PP_Select page size'] = 'Seleziona dimensione pagina';
+$lang['PP_Pwd_Actions'] = 'Gestione utenti';
+$lang['PP_No_Userlist'] = 'Nessun utente disponibile per la visualizzazione';
 ?>
