@@ -40,7 +40,7 @@ There is field test to measure the complexity of a password, and can afford to g
 Note: The score of a password is calculated based on several parameters: length, type of characters used (letters, digits, uppercase, lowercase, special characters). A score below 100 is considered low, from 100 to 500, the complexity is average; beyond 500, the security is excellent.';
 $lang['PP_passwadmTitle_d'] = 'An administrator can create a user account with or without application of the rule of computing complexity.<br/><br/>
 Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.';
-$lang['PP_PwdResetTitle_d'] = 'Enabling this option will add a new feature in the Piwigo\'s user management panel (Users> Manage) that can apply to renew the password for selected users. In addition, a new column is added to show the status of passwords for each of them with the following values:<br/><br/>
+$lang['PP_PwdResetTitle_d'] = 'Enabling this option will add a new feature in the management tab to renew the password for selected users. In addition, a new column is added to show the status of passwords for each of them with the following values:<br/><br/>
 - Password to be renewed: A password renewal request has been planned.<br/>
 - Password renewed: The password has been renewed after a request.<br/>
 - Original Password: The original password chosen at account creation and has never been required for a renewal.<br/><br/>
@@ -51,7 +51,7 @@ $lang['PP_LoginAttempts'] = 'Management of failed login attempts';
 $lang['PP_LoginAttempts_d'] = 'This option enables the recording of failed login attempts to the gallery due to incorrect password and automatically lock the concerned user account. It is designed to counter possible hacking attempts with the use of password dictionaries.<br/><br/>
 <b style=&quot;color: red;&quot;>Webmaster, generic and guest accounts are excluded from this function.</b><br/><br/>
 By enabling, you will be able to specify the maximum number of failed attempts allowed before locking and define a custom message to the user who has locked his account. This message is only displayed if the user succeeds in identification after locking.<br/><br/>
-To unlock the accounts, go to the user management interface for your gallery. You\'ll find a new column indicating the status of accounts symbolized by a red symbol (for locked account) and green (for unlocked account). Select one or more accounts to unlock and use the unlock button designed for this purpose.';
+To unlock the accounts, go to the management tab. You\'ll find a new column indicating the status of accounts symbolized by a red symbol (for locked account) and green (for unlocked account). Select one or more accounts to unlock and use the unlock button to apply the action.';
 $lang['PP_Max number of failed attempts'] = 'Maximum number of failed attempts: ';
 $lang['PP_Max number of failed attempts_d'] = 'The number 0 disables counting attempts.';
 $lang['PP_UserLocked_Custom_Txt'] = 'Customizing the information message to the locked user';

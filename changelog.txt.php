@@ -29,5 +29,13 @@ Plugin Name: Password Policy
 -- 2.6.0 : Piwigo 2.6 compatibility
            Update nl_NL, thanks to : eijdenberg
 
+-- 2.6.1 : Update reference translation (en_UK)
+           Update fr_FR
+           Update de_DE, thanks to : duke
+           Update es_ES, thanks to : jpr928 and petaqui
+           Update ru_RU, thanks to : Konve
+           Update lv_LV, thanks to : agrisans
+           Update tr_TR, thanks to : LazBoy
+
 */
 ?>
