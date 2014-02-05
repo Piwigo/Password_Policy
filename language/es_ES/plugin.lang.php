@@ -71,4 +71,13 @@ $lang['PP_User_Account_Locked_Txt'] = 'Lo sentimos, por razones de seguridad el 
 $lang['PP_Webmaster is not unlockable'] = 'Usuarios webmasters no pueden ser bloqueados y no se pueden desbloquear';
 $lang['PP_You cannot unlock your account'] = 'No puede bloquear su propia cuenta';
 $lang['PP_Err_Userlist_Settings'] = 'Esta ficha sólo está disponible si la renovación de contraseñas o cuentas de desbloqueo está activado';
+$lang['PP_No_Userlist'] = 'No hay usuarios disponibles para mostrar';
+$lang['PP_Pwd_Actions'] = 'Administración de usuarios';
+$lang['PP_Pwd_Actions_d'] = 'Desbloqueo de cuentas y renovación de contraseñas se ajustan aquí.<br/><br/>
+Selecciona los usuarios antes de seleccionar una acción. Marca el cuadro de confirmación antes de aplicar cualquier acción es obligatorio.<br/><br/>
+<b style=&quot;color: red;&quot;>Importante:</b> Acciones aplicadas <u><b>SOLO</b> en las cuentas de visitantes</u> y no administradores, webmaster, por efecto e invitados.';
+$lang['PP_Select page number'] = 'Selecciona el número de páginas a mostrar.';
+$lang['PP_Select page size'] = 'Selecciona el tamaño de la página.';
+$lang['PP_Users_List_Tab'] = 'Administración';
+$lang['PP_config_tab'] = 'Configuración';
 ?>
