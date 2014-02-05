@@ -37,5 +37,7 @@ Plugin Name: Password Policy
            Update lv_LV, thanks to : agrisans
            Update tr_TR, thanks to : LazBoy
 
+-- 2.6.2 : Fix error in fr_FR translation
+
 */
 ?>
