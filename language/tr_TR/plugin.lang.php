@@ -90,4 +90,14 @@ $lang['PP_LoginAttempts_d'] = 'Bu seçenek, hatalı parola girişleri nedeniyle 
 <b style="color: red;"> Webmaster, genel ve ziyaretçi hesapları bu fonksiyondan hariç tutulmuştur.</b> <br/> <br/>
 Etkinleştirerek, kaç adet başarısız girişim sonrası hesabın kilitleneceğini belirtebilir ve kullanıcıya gönderilecek özel mesajı belirleyebilirsiniz. Bu mesaj ancak kullanıcı tanımlaması kilitleme sonra başarılı olursa görüntülenir.<br/> <br/>
 Hesapların kilidini açmak için, galerinizin kullanıcının yönetim arayüzüne gidin. Kırmızı (kilitli hesap) ve yeşil (açık hesap) sembol olarak hesapların durumunu gösteren yeni bir kolon eklendiğini göreceksiniz. Kilidi açmak için bir veya daha fazla hesabı seçerek kilidi aç sembolünü kullanın.';
+$lang['PP_Pwd_Actions_d'] = 'Kilitli hesapların açılması ve şifre yenileme istekleri buradan ayarlanır.<br/><br/>
+Yapılmak istenen eylem öncesi kullanıcıyı seçin. Eylem öncesi onay kutusunun işaretlenmesi mecburidir.<br/><br/>
+<b style=&quot;color: red;&quot;>Önemli :</b> Eylemler <u><b>SADECE</b> konuk hesaplarında uygulanır</u>, yönetici, web sahibi, varsayılan ve ziyaretçilere değil.';
+$lang['PP_Err_Userlist_Settings'] = 'Bu sekme, hesaplarda şifre yenileme veya kilit açma etkin ise kullanılabilir';
+$lang['PP_No_Userlist'] = 'Mevcutta görüntülenecek kullanıcı bulunmuyor';
+$lang['PP_Pwd_Actions'] = 'Kullanıcı yönetimi';
+$lang['PP_Select page number'] = 'Görüntülenecek sayfa numarasını seçin';
+$lang['PP_Select page size'] = 'Sayfa boyutunu seçin';
+$lang['PP_Users_List_Tab'] = 'Yönetim';
+$lang['PP_config_tab'] = 'Yapılandırma';
 ?>
