@@ -97,4 +97,16 @@ Nota: A pontuação de uma senha é calculada com base em vários parâmetros: c
 ';
 $lang['PP_passwadmTitle_d'] = 'Um administrador pode criar uma conta de utilizador com ou sem a aplicação da regra de complexidade. <br/>
 Nota: Se, após a conta de utilizador criada, quiser alterar a senha e o verificador de senhas de utilizadores estiver ativo, ficará sujeito ao conjunto de regras.';
+$lang['PP_Err_Userlist_Settings'] = 'Esta guia apenas está disponível se Renovar senha ou desbloquear contas de estiverem ativados';
+$lang['PP_No_Userlist'] = 'Não Existem utilizadores para mostrar';
+$lang['PP_Pwd_Actions'] = 'Gerenciar utilizadores';
+$lang['PP_Pwd_Actions_d'] = 'Desbloquear contas e solicitações de renovação de senha são definidos aqui.<br/><br/>
+Selecione os utilizadores antes de definir uma ação. Sinalizar a caixa de confirmação é obrigatório antes de aplicar qualquer ação.<br/><br/>
+<b style=&quot;color: red;&quot;>Importante: </b> Aplicar ações <u><b>SOMENTE</b> em contas de visitantes </u> e não administradores, webmaster, padrão e convidados.
+';
+$lang['PP_Select page number'] = 'Selecione o número da página a mostrar';
+$lang['PP_Select page size'] = 'Selecionar o tamanho da página
+';
+$lang['PP_Users_List_Tab'] = 'Gerenciar';
+$lang['PP_config_tab'] = 'Configuração';
 ?>
