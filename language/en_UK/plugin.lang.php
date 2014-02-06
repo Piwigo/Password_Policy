@@ -1,5 +1,5 @@
 <?php
-$lang['PP_Title'] = 'Password Policy - Version : ';
+$lang['PP_Title'] = 'Password Policy - Version: ';
 $lang['PP_SubTitle'] = 'Plugin configuration';
 $lang['PP_submit'] = 'Submit settings';
 $lang['PP_save_config'] ='Settings saved.';
@@ -9,8 +9,8 @@ $lang['PP_Support_txt'] = 'The official support on this plugin is only on these 
 <a href="http://piwigo.org/forum/viewtopic.php?id=22863" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=22863</a>';
 $lang['PP_PasswordTest'] = 'Score calculation';
 $lang['PP_ScoreTest'] = 'Result: ';
-$lang['PP_Error_Password_Mandatory'] = 'Security : Password is mandatory !';
-$lang['PP_Error_Password_Need_Enforcement_%s'] = 'Security : A control system calculates a score on the chosen passwords complexity. The complexity of your password is too low (score = %s). Please, choose a new password more secure by following these rules:<br/>
+$lang['PP_Error_Password_Mandatory'] = 'Security: Password is mandatory!';
+$lang['PP_Error_Password_Need_Enforcement_%s'] = 'Security: A control system calculates a score on the chosen passwords complexity. The complexity of your password is too low (score = %s). Please, choose a new password more secure by following these rules:<br/>
 - Use letters and numbers<br/>
 - Use lowercase and uppercase<br/>
 - Increase its length (number of characters)<br/>
