@@ -28,16 +28,16 @@ $lang['PP_Disable'] = ' Deaktiver (standard)';
 $lang['PP_Enable'] = ' Aktiver';
 $lang['PP_Support_txt'] = 'Officiel support af denne plugin er kun tilgængelig i disse Piwigo-forumemner:<br>
 <a href="http://piwigo.org/forum/viewtopic.php?id=22863" onclick="window.open(this.href);return false;">Engelsk forum - http://piwigo.org/forum/viewtopic.php?id=22863</a>';
-$lang['PP_PasswordTest'] = 'Adgangskodetest:';
+$lang['PP_PasswordTest'] = 'Beregn værdi';
 $lang['PP_ScoreTest'] = 'Resultat:';
 $lang['PP_Error_Password_Mandatory'] = 'Sikkerhed: En adgangskode er påkrævet!';
 $lang['PP_Error_Password_Need_Enforcement_%s'] = 'Sikkerhed: Et kontrolsystem beregner en værdi for den valgte adgangskodes kompleksitet. Din adgangskodes kompleksitet er for lav (værdi = %s). Vær venlig at vælge en ny og mere sikker adgangskode ved at følge disse regler:<br>
 - Brug bogstaver og tal<br>
 - Brug små og store bogstaver<br>
 - Forøg længden (antal tegn)<br>
-Administratoren kræver følgende minimale adgangskodeværdi:';
+Administratoren kræver følgende minimale adgangskodescore:';
 $lang['PP_Password_Enforced'] = 'Stærkere sikkerhedsniveau på adgangkoder';
-$lang['PP_Password_Enforced_true'] = ' Aktiver. Minimal score:';
+$lang['PP_Password_Enforced_true'] = ' Aktiver. Minimal værdi:';
 $lang['PP_AdminPassword_Enforced'] = 'Gældende for administratorer';
 $lang['PP_Password_Reset_Msg'] = 'Vær venlig at ændre din adgangskode!';
 $lang['PP_PwdReset'] = 'Fornyelse af adgangskode';
@@ -55,10 +55,10 @@ $lang['PP_PwdReset_NA'] = 'Oprindelig adgangskode';
 $lang['PP %d user pwdreseted'] = 'Fornyelse af adgangskode krævet for brugeren %d';
 $lang['PP %d users pwdreseted'] = 'Fornyelse af adgangskode krævet for brugerne %d';
 $lang['PP_passwtestTitle'] = 'Tester adgangskodens kompleksitet';
-$lang['PP_passwtestTitle_d'] = 'Skriv adgangskoden, der skal testes, og klik dernæst på &quot;Beregn score&quot; for at se resultatet.';
-$lang['PP_passwTitle_d'] = 'Aktivering af denne valgmulighed gør det til at krav at have en adgangskode ved registreringen, og kræver at den valgte adgangskode opfylder et minimalt kompleksitetsniveau.  Hvis tærsklen ikke opfyldes, vil den opnåede score og den minimale score, der skal opfyldes, blive vist, sammen med anbefalinger til forbedring af scoren.<br /><br />
+$lang['PP_passwtestTitle_d'] = 'Skriv adgangskoden, der skal testes, og klik dernæst på &quot;Beregn værdi&quot; for at se resultatet.';
+$lang['PP_passwTitle_d'] = 'Aktivering af denne valgmulighed gør det til at krav at have en adgangskode ved registreringen, og kræver at den valgte adgangskode opfylder et minimalt kompleksitetsniveau.  Hvis tærsklen ikke opfyldes, vil den opnåede værdi og den minimale værdi, der skal opfyldes, blive vist, sammen med anbefalinger til forbedring af værdien.<br /><br />
 Der er et testfelt til måling af adgangskodens kompleksitet, og som giver en idé om hvordan man definerer en sådan.<br><br>
-Bemærk: Adgangskodens score beregnes ud fra flere parametre: længde, typen af benyttede tegn (bogstaver, tal, store bogstaver, små bogstaver, særlige tegn). En score på under 100 betragtes som lav, fra 100 til 500 er kompleksiteten gennemsnitlig og over 500 er sikkerheden fremragende.';
+Bemærk: Adgangskodens værdi beregnes ud fra flere parametre: længde, typen af benyttede tegn (bogstaver, tal, store bogstaver, små bogstaver, særlige tegn). En værdi på under 100 betragtes som lav, fra 100 til 500 er kompleksiteten gennemsnitlig og over 500 er sikkerheden fremragende.';
 $lang['PP_passwadmTitle_d'] = 'En administrator kan oprette en brugerkonto med eller uden krav om kompleksitetsberegning.<br><br>
 Bemærk: Hvis en brugeren senere ønsker at ændre adgangskode og der er krav om at brugerne har stærke adgangskoder, vil adgangskoden blive udsat for kravet.';
 $lang['PP_PwdResetTitle_d'] = 'Aktivering af denne valgmulighed tilføjer en ny funktion til håndteringsfanen vedrørende fornyelse af udvalgte brugeres adgangskoder. Desuden tilføjes en ny kolonne, som viser adgangskodestatus for hver af dem, med følgende værdier:<br /><br />
