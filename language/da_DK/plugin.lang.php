@@ -99,7 +99,6 @@ $lang['PP_Err_Userlist_Settings'] = 'Denne fane er kun tilgængelig, hvis fornye
 $lang['PP_Pwd_Actions'] = 'Brugerhåndtering';
 $lang['PP_Select page number'] = 'Vælg sidenummer for at vise';
 $lang['PP_Select page size'] = 'Vælg sidestørrelse';
-Vælg sidestørrelse';
 $lang['PP_Users_List_Tab'] = 'Håndtering';
 $lang['PP_config_tab'] = 'Opsætning';
 ?>
