@@ -91,4 +91,14 @@ $lang['PP_Password_Enforced'] = 'Reforçar o nível de senhas de segurança';
 $lang['PP_Password_Enforced_true'] = 'Ativar. Pontuação Mínima:';
 $lang['PP_Password_Reset_Msg'] = 'Por favor, altere sua senha!';
 $lang['PP_PwdReset'] = 'Renovação de senha';
+$lang['PP_Err_Userlist_Settings'] = 'Este aba estará disponível apenas se a renovação de senha ou contas de desbloqueio estiver habilitado';
+$lang['PP_No_Userlist'] = 'Não há usuários disponíveis para visualização';
+$lang['PP_Pwd_Actions'] = 'Gerenciamento de usuários';
+$lang['PP_Pwd_Actions_d'] = 'Desbloquear contas e solicitações de renovação de senha são definidos aqui.<br/><br/>
+Selecione os usuários antes de definir uma ação. Caixa de confirmação é obrigatória antes de aplicar qualquer ação. <br/><br/> 
+<b style=&quot;color: red;&quot;>Importante :</b> Aplicar a Ação <u><b>SOMENTE</b> em contas de visitantes</u>e não administradores, webmasters, padrão e convidados.';
+$lang['PP_Select page number'] = 'Selecione o número da página para exibir';
+$lang['PP_Select page size'] = 'Selecione o tamanho da página';
+$lang['PP_Users_List_Tab'] = 'Gerenciamento';
+$lang['PP_config_tab'] = 'Configuração';
 ?>
