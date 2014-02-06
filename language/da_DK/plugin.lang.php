@@ -91,15 +91,15 @@ $lang['PP_Max number of failed attempts'] = 'Maksimalt antal mislykkede logonfor
 $lang['PP_Max number of failed attempts_d'] = 'Tallet 0 deaktiverer optælling af logonforsøg.';
 $lang['PP %d user unlocked'] = '%d bruger oplåst';
 $lang['PP %d users unlocked'] = '%d brugere oplåst';
-$lang['PP_Pwd_Actions_d'] = 'Oplåsning af konti og anmodninger om fornyelse af kodeord bliver indstillet her. <br/><br/>
-Vælg brugere før indstilling af en handling. Bekræftelse i afkrydsningsfelt er obligatorisk, før du anvender nogen handling. <br/><br/>
-<b style=&quot;color: red;&quot;> Vigtigt: <br/><br/> Handlinger anvendes <u><b>ONLY</b> KUN </b> på besøgendes konti </u>, og ikke administratorer, webmaster, standard og gæst.';
+$lang['PP_Pwd_Actions_d'] = 'Oplåsning af konti og anmodninger om fornyelse af adgangskode opsættes her.<br /><br />
+Vælg brugere før en handling opsættes. Bekræftelse i afkrydsningsfelt er obligatorisk, før en handling udføres.<br /><br />
+<b style=&quot;color: red;&quot;>Vigtigt</b>:<br /><br /> Handlinger udføres <u><b>KUN</b> på besøgendes konti</u>, og ikke administratorer, webmaster, standard eller gæst.';
 $lang['PP_No_Userlist'] = 'Ingen brugere tilgængelige for visning';
 $lang['PP_Err_Userlist_Settings'] = 'Denne fane er kun tilgængelig, hvis fornyelse af adgangskode eller oplåsning af konti er aktiveret';
-$lang['PP_Pwd_Actions'] = 'brugere styring';
+$lang['PP_Pwd_Actions'] = 'Brugerhåndtering';
 $lang['PP_Select page number'] = 'Vælg sidenummer for at vise';
-$lang['PP_Select page size'] = '
+$lang['PP_Select page size'] = 'Vælg sidestørrelse';
 Vælg sidestørrelse';
-$lang['PP_Users_List_Tab'] = 'Styring';
-$lang['PP_config_tab'] = 'Konfiguration';
+$lang['PP_Users_List_Tab'] = 'Håndtering';
+$lang['PP_config_tab'] = 'Opsætning';
 ?>
