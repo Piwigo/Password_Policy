@@ -95,11 +95,11 @@ $(document).ready(function()
       </table>
 
   <div id="pager" class="pager">
-		<img src="{$PP_PATH}admin/template/icon/first.png" class="first" alt=""/>
-		<img src="{$PP_PATH}admin/template/icon/prev.png" class="prev" alt=""/>
+		<img src="{$PP_PATH}admin/template/icons/first.png" class="first" alt=""/>
+		<img src="{$PP_PATH}admin/template/icons/prev.png" class="prev" alt=""/>
 		<input type="text" class="pagedisplay"/>
-		<img src="{$PP_PATH}admin/template/icon/next.png" class="next" alt=""/>
-		<img src="{$PP_PATH}admin/template/icon/last.png" class="last" alt=""/>
+		<img src="{$PP_PATH}admin/template/icons/next.png" class="next" alt=""/>
+		<img src="{$PP_PATH}admin/template/icons/last.png" class="last" alt=""/>
 		<select class="pagesize" title="{'PP_Select page size'|@translate}">
 			<option  value="10">10</option>
 			<option selected="selected" value="20">20</option>

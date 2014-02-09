@@ -39,5 +39,13 @@ Plugin Name: Password Policy
 
 -- 2.6.2 : Fix error in fr_FR translation
 
+-- 2.6.3 : Fix display of page-up and down button in management tab
+           Update it_IT, thanks to : Ericnet
+           Update lv_LV, thanks to : agrisans
+           Update da_DK, thanks to : Egorip
+           Update pt_PT, thanks to : ANO
+           Update pt_BR, thanks to : flaviove
+           Update da_DK, thanks to : Kaare
+
 */
 ?>
