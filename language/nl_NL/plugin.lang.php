@@ -32,4 +32,58 @@ $lang['PP %d users unlocked'] = '%d gebruikers ontgrendeld';
 $lang['PP %d users pwdreseted'] = 'Wachtwoord vernieuwing nodig voor %d gebruikers';
 $lang['PP %d user unlocked'] = '%d gebruiker ontgrendeld';
 $lang['PP %d user pwdreseted'] = 'Wachtwoord vernieuwing nodig voor %d gebruiker';
+$lang['PP_UserLocked_Custom_Txt'] = 'Aanpassen van de boodscap aan de vergrendelde gebruiker';
+$lang['PP_Title'] = 'Wachtwoordbeleid - versie:';
+$lang['PP_submit'] = 'Bevestig de nieuwe instellingen';
+$lang['PP_save_config'] = 'Instellingen opgeslagen.';
+$lang['PP_passwtestTitle_d'] = 'Voer het wachtwoord in om te testen en click op &quot;Bereken  Score&quot; om het resultaat vte zien.';
+$lang['PP_passwtestTitle'] = 'Test de complexiteit van het wachtwoord';
+$lang['PP_config_tab'] = 'Instellingen';
+$lang['PP_You need to confirm unlock'] = 'Je moet de ontgrendeling bevestigen (check box)!';
+$lang['PP_You need to confirm pwdreset'] = 'Je moet het nieuwe wachtwword bevestigen (check box)!';
+$lang['PP_You cannot unlock your account'] = 'Je kunt niet je eigen account ontgrendelen';
+$lang['PP_You cannot pwdreset your account'] = 'Wachtwoord vernieuwing kan niet worden ingesteld voor je eigen account!';
+$lang['PP_Webmaster is not unlockable'] = 'Webbeheerder gebruikers kunnen niet worden vergrendeld of ontgrendeld';
+$lang['PP_Unlock'] = 'Ontgrendeling';
+$lang['PP_Webmaster cannot be pwdreset'] = 'Wachtwoord vernieuwing kan niet worden ingeschakelt voor het web beheerders account!';
+$lang['PP_Users_List_Tab'] = 'Beheer';
+$lang['PP_User Not Locked'] = 'Gebruiker niet vergrendeld';
+$lang['PP_User Locked'] = 'Gebruiker vergrendeld';
+$lang['PP_Unlock selected users'] = 'Ontgrendel geselecteerde gebruikers';
+$lang['PP_SubTitle'] = 'Plugin instellingen';
+$lang['PP_Select page size'] = 'Kies de pagina grootte';
+$lang['PP_Select page number'] = 'Kies een pagina nummer om te tonen';
+$lang['PP_ScoreTest'] = 'Resultaat:';
+$lang['PP_Pwd_Actions'] = 'Gebruikers beheer';
+$lang['PP_PwdReset_Todo'] = 'Nieuw wachtwoord';
+$lang['PP_PwdReset_NA'] = 'Huidig wachtwoord';
+$lang['PP_PwdReset_Done'] = 'Wachtwoord vernieuwd';
+$lang['PP_Password_Enforced_true'] = 'Aanzetten. Minimum score:';
+$lang['PP_PwdReset'] = 'wachtwoord vernieuwing';
+$lang['PP_Password_Reset_Msg'] = 'Vernieuw a.u.b. uw wachtwoord!';
+$lang['PP_Password_Enforced'] = 'Versterking van het veiligheids niveau van wachtwoorden';
+$lang['PP_PasswordTest'] = 'score berekening';
+$lang['PP_Password reset selected users'] = 'Verzoek wachtwoord vernieuwing voor geselecteerde gebruikers';
+$lang['PP_No_Userlist'] = 'Geen gebruikers beschikbaar om te tonen';
+$lang['PP_Max number of failed attempts_d'] = 'Indien 0: het tellen van mislukte pogingen wordt uitgeschakeld.';
+$lang['PP_Max number of failed attempts'] = 'Maximaal aantal mislukte pogingen:';
+$lang['PP_LoginAttempts_d'] = 'Deze optie zet de registratie aan van mislukte inlog pogingen in de gallery als gevolg van invoer van onjuist wachtwoord en blokkeert automatisch het betreffende gebruikers account.
+Dit is ontworpen om mogelijke inbraak pogingen met gebruik van wachtwoord lijsten tegen te gaan.<br/><br/>
+<b style=&quot;color: red;&quot;> Webbeheerder, algemene en gast accounts zijn uitgesloten van deze functie.</b><br/><br/>
+Door deze optie aan te zetten kun je het maximaal toegestane aantal mislukte inlog pogingen opgeven voor dat het systeem wordt vergrendeld en kun je een standaard boodschap opgeven die wordt getoond aan de gebruiker. Dit bericht wordt alleen getoond nadat de gebruiker alsnog met success de identificatie voltooid.<br/><br/>
+Om het account te ontgrendelen, ga je naar de beheerders tab, daar vind je een nieuwe kolom met indicatie over de status van het betreffende account, dmv een rood symbool (voor een vergrendeld account), of een groen symbool (voor een ontgrendeld account).
+Selecteer een of meer accounts om te ontgrendelen, en gebruik de ontgrendel knop om de actie uit te voeren.';
+$lang['PP_LockedUsers'] = 'Vergrendeling status';
+$lang['PP_LoginAttempts'] = 'Beheer van mislukte inlog pogingen';
+$lang['PP_Guest is not unlockable'] = 'Gast gebruikers kunnen niet worden vergrendeld of ontgrendeld';
+$lang['PP_Generic is not unlockable'] = 'Algemene gebruikers kunnen niet worden vergrendeld of ontgrendeld';
+$lang['PP_Guest cannot be pwdreset'] = 'Wachtwoord vernieuwing kan niet worden geselecteerd voor gast accounts!';
+$lang['PP_Generic cannot be pwdreset'] = 'Wachtwoord vernieuwing kan niet worden geselecteerd voor algemene accounts!';
+$lang['PP_Err_Userlist_Settings'] = 'Deze tab is alleen beschikbaar indien wachtwoord vernieuwing of ontgrendeling accounts is aan gezet';
+$lang['PP_Error_Password_Need_Enforcement_%s'] = 'Beveiliging: Een controle systeem berekend een score voor de complexiteit van het gekozen wachtwoord. Het wachtwoord is te eenvoudig (score = %s).
+Volg a.u.b. de volgende regels bij het kiezen van een wachtwoord:.<br/>
+- Gebruik letters en cijfers<br/>
+- Gebruik kleine letters en hoofdletters<br/>
+- Maak het langer (gebruik meer tekens)<br/>
+De minimaal vereiste wachtwoord score voor beheerders is:';
 ?>
