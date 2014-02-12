@@ -86,4 +86,8 @@ Volg a.u.b. de volgende regels bij het kiezen van een wachtwoord:.<br/>
 - Gebruik kleine letters en hoofdletters<br/>
 - Maak het langer (gebruik meer tekens)<br/>
 De minimaal vereiste wachtwoord score voor beheerders is:';
+$lang['PP_passwadmTitle_d'] = 'Een beheerder kan een gebruikersaccount aanmaken met of zonder toepassing van de regel van het berekenen van complexiteit.<br/><br/> 
+Opmerking: Als de gebruiker van het aangemaakte account daarna het wachtwoord wilt wijzigen en "het versterken van wachtwoorden voor gebruikers" actief is, wordt het account alsnog onderworpen aan de ingestelde regelset.';
+$lang['PP_UserLocked_Custom_Txt_d'] = 'Hier kunt u de tekst van het bericht aan de gebruiker wiens account is geblokkeerd veranderen. Om meerdere talen te gebruiken, kunt u labels van de "Uitgebreide beschrijving"-plugin gebruiken, als deze actief is.';
+$lang['PP_User_Account_Locked_Txt'] = 'Sorry, in verband met veiligheidsredenen is uw toegang tot de galerie geblokkeerd, dit als gevolg van te veel mislukte inlogpogingen. Dit kan te wijten zijn aan een hack-poging op uw account. Neem contact op met de beheerder van deze site om de toegang te herstellen.';
 ?>
