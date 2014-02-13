@@ -67,7 +67,7 @@ $lang['PP_Password reset selected users'] = 'Verzoek wachtwoord vernieuwing voor
 $lang['PP_No_Userlist'] = 'Geen gebruikers beschikbaar om te tonen';
 $lang['PP_Max number of failed attempts_d'] = 'Indien 0: het tellen van mislukte pogingen wordt uitgeschakeld.';
 $lang['PP_Max number of failed attempts'] = 'Maximaal aantal mislukte pogingen:';
-$lang['PP_LoginAttempts_d'] = 'Deze optie zet de registratie aan van mislukte inlog pogingen in de gallery als gevolg van invoer van onjuist wachtwoord en blokkeert automatisch het betreffende gebruikers account.
+$lang['PP_LoginAttempts_d'] = 'Deze optie zet de registratie aan van mislukte inlog pogingen in de galerij als gevolg van invoer van onjuist wachtwoord en blokkeert automatisch het betreffende gebruikers account.
 Dit is ontworpen om mogelijke inbraak pogingen met gebruik van wachtwoord lijsten tegen te gaan.<br/><br/>
 <b style=&quot;color: red;&quot;> Webbeheerder, algemene en gast accounts zijn uitgesloten van deze functie.</b><br/><br/>
 Door deze optie aan te zetten kun je het maximaal toegestane aantal mislukte inlog pogingen opgeven voor dat het systeem wordt vergrendeld en kun je een standaard boodschap opgeven die wordt getoond aan de gebruiker. Dit bericht wordt alleen getoond nadat de gebruiker alsnog met success de identificatie voltooid.<br/><br/>
@@ -79,7 +79,7 @@ $lang['PP_Guest is not unlockable'] = 'Gast gebruikers kunnen niet worden vergre
 $lang['PP_Generic is not unlockable'] = 'Algemene gebruikers kunnen niet worden vergrendeld of ontgrendeld';
 $lang['PP_Guest cannot be pwdreset'] = 'Wachtwoord vernieuwing kan niet worden geselecteerd voor gast accounts!';
 $lang['PP_Generic cannot be pwdreset'] = 'Wachtwoord vernieuwing kan niet worden geselecteerd voor algemene accounts!';
-$lang['PP_Err_Userlist_Settings'] = 'Deze tab is alleen beschikbaar indien wachtwoord vernieuwing of ontgrendeling accounts is aan gezet';
+$lang['PP_Err_Userlist_Settings'] = 'Deze tab is alleen beschikbaar indien wachtwoord vernieuwing of ontgrendeling accounts is aangezet';
 $lang['PP_Error_Password_Need_Enforcement_%s'] = 'Beveiliging: Een controle systeem berekend een score voor de complexiteit van het gekozen wachtwoord. Het wachtwoord is te eenvoudig (score = %s).
 Volg a.u.b. de volgende regels bij het kiezen van een wachtwoord:.<br/>
 - Gebruik letters en cijfers<br/>
@@ -90,4 +90,9 @@ $lang['PP_passwadmTitle_d'] = 'Een beheerder kan een gebruikersaccount aanmaken 
 Opmerking: Als de gebruiker van het aangemaakte account daarna het wachtwoord wilt wijzigen en "het versterken van wachtwoorden voor gebruikers" actief is, wordt het account alsnog onderworpen aan de ingestelde regelset.';
 $lang['PP_UserLocked_Custom_Txt_d'] = 'Hier kunt u de tekst van het bericht aan de gebruiker wiens account is geblokkeerd veranderen. Om meerdere talen te gebruiken, kunt u labels van de "Uitgebreide beschrijving"-plugin gebruiken, als deze actief is.';
 $lang['PP_User_Account_Locked_Txt'] = 'Sorry, in verband met veiligheidsredenen is uw toegang tot de galerie geblokkeerd, dit als gevolg van te veel mislukte inlogpogingen. Dit kan te wijten zijn aan een hack-poging op uw account. Neem contact op met de beheerder van deze site om de toegang te herstellen.';
+$lang['PP_Support_txt'] = 'De officiële support voor deze plugin kunt u vinden op het volgende Piwigo forum onderwerp:<br/>
+<a href="http://piwigo.org/forum/viewtopic.php?id=22863" onclick="window.open(this.href);return false;">Engels forum - http://piwigo.org/forum/viewtopic.php?id=22863</a>';
+$lang['PP_passwTitle_d'] = 'Het inschakelen van deze optie verplicht het gebruik van een wachtwoord bij registratie, en vereist dat het door de bezoeker gekozen wachtwoord een ​zekere mate van complexiteit bezit. Als de drempel van complexiteit niet wordt gehaald, wordt de bereikte score en de minimaal te behalen score getoond, samen met aanbevelingen om deze score te bereiken.<br/><br/> 
+Een testveld geeft u de mogelijkheid om de complexiteit van een wachtwoord te meten. Hierdoor krijgt u een idee hoe de score zich verhoudt tot de complexiteit. <br/><br/> 
+Opmerking: De score van een wachtwoord wordt berekend op basis van verschillende parameters: lengte, type gebruikte tekens (letters, cijfers, hoofdletters, kleine letters, speciale tekens). Een score lager dan 100 wordt als laag beschouwd, van 100 tot 500, de complexiteit is gemiddeld, meer dan 500, de veiligheid is uitstekend.';
 ?>
