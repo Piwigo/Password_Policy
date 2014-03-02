@@ -47,5 +47,10 @@ Plugin Name: Password Policy
            Update pt_BR, thanks to : flaviove
            Update da_DK, thanks to : Kaare
 
+-- 2.6.4 : Update nl_NL, thanks to : rinusbakker and Kees Hessels
+           Update el_GR, thanks to : bas_alba
+           Add sk_SK, thanks to : JoeKundlak and dodo
+           Add zh_CN, thanks to : junwang
+
 */
 ?>
