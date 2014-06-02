@@ -95,4 +95,14 @@ $lang['PP_Support_txt'] = 'De officiële support voor deze plugin kunt u vinden 
 $lang['PP_passwTitle_d'] = 'Het inschakelen van deze optie verplicht het gebruik van een wachtwoord bij registratie, en vereist dat het door de bezoeker gekozen wachtwoord een ​zekere mate van complexiteit bezit. Als de drempel van complexiteit niet wordt gehaald, wordt de bereikte score en de minimaal te behalen score getoond, samen met aanbevelingen om deze score te bereiken.<br/><br/> 
 Een testveld geeft u de mogelijkheid om de complexiteit van een wachtwoord te meten. Hierdoor krijgt u een idee hoe de score zich verhoudt tot de complexiteit. <br/><br/> 
 Opmerking: De score van een wachtwoord wordt berekend op basis van verschillende parameters: lengte, type gebruikte tekens (letters, cijfers, hoofdletters, kleine letters, speciale tekens). Een score lager dan 100 wordt als laag beschouwd, van 100 tot 500, de complexiteit is gemiddeld, meer dan 500, de veiligheid is uitstekend.';
-?>
+$lang['PP_Pwd_Actions_d'] = 'Ontgrendelen van accounts en verlenging aanvragen van wachtwoorden  worden hier ingesteld.<br/><br/>
+Selecteer gebruikers voordat u actie onderneemt. Checkbox bevestiging is verplicht alvorens enige actie.<br/><br/>
+<b style="color: red;"> Belangrijk: </ b> Acties toepassen <u> <b> ALLEEN </ b> op bezoeker accounts </ u> en niet de beheerders, webmaster, standaard en gast.';
+$lang['PP_PwdResetTitle_d'] = 'Inschakelen van deze optie zal een nieuwe functie toevoegen aan het tabblad management, om het wachtwoord voor geselecteerde gebruikers te verlengen. Daarnaast wordt een nieuwe kolom toegevoegd om de status van wachtwoorden voor elk van hen te tonen met de volgende waarden:<br/>
+<br/>
+- Wachtwoord te verlengen: Een verzoek van wachtwoord verlenging is ingediend.
+<br/>.
+- Wachtwoord verlengd: Het wachtwoord is na een verzoek verlengd. <br/>
+- Origineel wachtwoord: Het oorspronkelijke wachtwoord gekozen bij het aanmaken van een account, is nooit nodig voor een verlenging. br/><br/>
+<b style="color: red;"> Webmaster, generiek en gast-accounts zijn uitgesloten van deze functie.</b><br/><br/>
+Deze gebruikers worden automatisch doorgestuurd naar hun aangepaste pagina bij elk van hun connecties, totdat ze hun wachtwoord verandert hebben; een expliciete boodschap zal op deze pagina worden weergegeven.';
