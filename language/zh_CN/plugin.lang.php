@@ -21,10 +21,10 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['PP_LockedUsers'] = '锁定状态';
-$lang['PP_LoginAttempts'] = '无法登录管理';
-$lang['PP_Guest is not unlockable'] = '来宾帐户不能被锁定和解锁';
+$lang['PP_LoginAttempts'] = '管理失败的登录尝试';
+$lang['PP_Guest is not unlockable'] = '游客账户不能被锁定和解锁';
 $lang['PP_Admins is not unlockable'] = '管理员账户不能被锁定和解锁';
-$lang['PP_Guest cannot be pwdreset'] = '不能设置来宾帐户的密码更新!';
+$lang['PP_Guest cannot be pwdreset'] = '游客账户不能更新密码！';
 $lang['PP_Generic is not unlockable'] = '通用账户不能被锁定和解锁';
 $lang['PP_Generic cannot be pwdreset'] = '通用账户不能更新密码！';
 $lang['PP_Error_Password_Need_Enforcement_%s'] = '安全：控制系统计算所选择的密码的复杂性。你的密码的复杂度太低（得分= %s）。请用以下规则选择一个更安全的新密码：<br/>
