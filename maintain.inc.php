@@ -10,7 +10,7 @@ include_once (PP_PATH.'include/functions.inc.php');
 load_language('plugin.lang', PP_PATH);
 
 
-function plugin_install()
+function plugin_install($id, $version, &$errors)
 {
 	global $conf;
 
@@ -122,7 +122,7 @@ ADD PP_lock enum("true","false")
 }
 
 
-function plugin_uninstall()
+function plugin_uninstall($id, $version, &$errors)
 {
   global $conf;
 

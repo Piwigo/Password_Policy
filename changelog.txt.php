@@ -52,5 +52,8 @@ Plugin Name: Password Policy
            Add sk_SK, thanks to : JoeKundlak and dodo
            Add zh_CN, thanks to : junwang
 
+-- 2.7.0 : Compatibility with Piwigo 2.7
+           Update nl_NL, thanks to : euroart
+           Update zh_CN, thanks to : dennisyan
 */
 ?>
