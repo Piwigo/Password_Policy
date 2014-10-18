@@ -55,5 +55,7 @@ Plugin Name: Password Policy
 -- 2.7.0 : Compatibility with Piwigo 2.7
            Update nl_NL, thanks to : euroart
            Update zh_CN, thanks to : dennisyan
+
+-- 2.7.1 : Update uk_UA, thanks to : StreamThreader
 */
 ?>
