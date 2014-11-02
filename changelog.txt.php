@@ -57,5 +57,7 @@ Plugin Name: Password Policy
            Update zh_CN, thanks to : dennisyan
 
 -- 2.7.1 : Update uk_UA, thanks to : StreamThreader
+
+-- 2.7.2 : Add nb_NO, thanks to : paulen
 */
 ?>
