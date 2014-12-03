@@ -59,5 +59,9 @@ Plugin Name: Password Policy
 -- 2.7.1 : Update uk_UA, thanks to : StreamThreader
 
 -- 2.7.2 : Add nb_NO, thanks to : paulen
+
+-- 2.7.3 : Update nb_NO, thanks to : paulen
+		   Update uk_UA, thanks to m_alien
+		   Update de_DE, thanks to bigant
 */
 ?>
