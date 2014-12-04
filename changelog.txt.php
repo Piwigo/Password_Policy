@@ -63,5 +63,7 @@ Plugin Name: Password Policy
 -- 2.7.3 : Update nb_NO, thanks to : paulen
 		   Update uk_UA, thanks to m_alien
 		   Update de_DE, thanks to bigant
+
+--- 2.7.4 : Fix white page for german users (bug lexiglot)
 */
 ?>
