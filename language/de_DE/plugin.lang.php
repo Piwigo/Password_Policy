@@ -39,7 +39,7 @@ $lang['PP_passwTitle_d'] = 'Enabling this option makes mandatory the seizure of 
 There is field test to measure the complexity of a password, and can afford to get an idea of the score to define complex custom.<br/><br/>
 Note: The score of a password is calculated based on several parameters: length, type of characters used (letters, digits, uppercase, lowercase, special characters). A score below 100 is considered low, from 100 to 500, the complexity is average; beyond 500, the security is excellent.';
 $lang['PP_passwadmTitle_d'] = 'An administrator can create a user account with or without application of the rule of computing complexity.<br/><br/>
-Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.';
+Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.
 Webmaster, generischen und Gast-Accounts sind von dieser Funktion ausgeschlossen.<br>
 Diese Benutzer werden automatisch auf ihre Anpassung an jeder Seite ihrer Verbindungen umgeleitet werden, bis sie ihr Passwort geändert und eine explizite Meldung auf dieser Seite angezeigt werden.';
 $lang['PP_Admins is not unlockable'] = 'Administratoren können nicht gesperrt und entsperrt werden';
