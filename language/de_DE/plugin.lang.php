@@ -77,3 +77,10 @@ $lang['PP_Select page number'] = 'Seitenzahl wählen, die angezeigt werden soll'
 $lang['PP_Select page size'] = 'Seitengröße auswählen';
 $lang['PP_Users_List_Tab'] = 'Verwaltung';
 $lang['PP_config_tab'] = 'Konfiguration';
+
+$lang['PP_PwdResetTitle_d'] = 'Das Aktivieren dieser Option wird eine neue Funktion im Piwigo-Benutzerverwaltung Panel hinzufügen (Benutzer> Verwalten), das kann sich bewerben, um das Passwort für ausgewählte Benutzer zu erneuern. Darüber hinaus wird eine neue Spalte hinzugefügt, um den Status von Passwörtern für jeden von ihnen für die folgenden Werte:<br>
+- Passwort erneuert werden: Ein Passwort Antrag auf Verlängerung ist geplant.<br>
+- Passwort erneuert: Das Passwort hat nach einer Anfrage erneuert worden.<br>
+- Original-Passwort: Das Original-Passwort an Account-Erstellung gewählt und hat noch nie für eine Erneuerung erforderlich gewesen.<br>
+Webmaster, generischen und Gast-Accounts sind von dieser Funktion ausgeschlossen.<br>
+Diese Benutzer werden automatisch auf ihre Anpassung an jeder Seite ihrer Verbindungen umgeleitet werden, bis sie ihr Passwort geändert und eine explizite Meldung auf dieser Seite angezeigt werden.';
