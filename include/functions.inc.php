@@ -146,41 +146,50 @@ function PP_log_fail($username)
 
   $conf_PP = unserialize($conf['PasswordPolicy']);
 
-  if (
-        (isset($conf_PP['NBLOGFAIL']) and $conf_PP['NBLOGFAIL'] <> 0)
+  if ((isset($conf_PP['NBLOGFAIL']) and $conf_PP['NBLOGFAIL'] <> 0)
     and (isset($conf_PP['LOGFAILBLOCK']) and $conf_PP['LOGFAILBLOCK'] == 'true')
-    and !is_admin()
-    and !is_webmaster()
     )
   {
-    // If login failure then increments loginfailcount value in database
-    $query = '
+    $query ='
+SELECT ui.status
+FROM '.USER_INFOS_TABLE.' AS ui
+  LEFT JOIN '.USERS_TABLE.' AS u
+    ON u.id = ui.user_id 
+WHERE(u.username = "'.stripslashes($username).'")
+;';
+    $exclude = pwg_db_fetch_assoc(pwg_query($query));
+
+    // Exclude specific accounts
+    if ($exclude['status'] <> "webmaster" and $exclude['status'] <> "admin" and $exclude['status'] <> "generic")
+    {
+      // If login failure then increments loginfailcount value in database
+      $query = '
 UPDATE '.USERS_TABLE.'
 SET PP_loginfailcount = PP_loginfailcount+1
 WHERE username = "'.stripslashes($username).'"
 LIMIT 1
 ;';
-    pwg_query($query);
+      pwg_query($query);
 
-    $query = '
+      $query = '
 SELECT PP_loginfailcount
 FROM '.USERS_TABLE.'
 WHERE username = "'.stripslashes($username).'"
 ;';
 
-    $datas = pwg_db_fetch_assoc(pwg_query($query));
+      $datas = pwg_db_fetch_assoc(pwg_query($query));
 
-    // If number of failed logon exeeds $conf_PP['NBLOGFAIL'], set the account as locked
-    if (isset($datas['PP_loginfailcount']) and $datas['PP_loginfailcount'] >= $conf_PP['NBLOGFAIL'])
-    {
-      $query = '
+      // If number of failed logon exceeds $conf_PP['NBLOGFAIL'], set the account as locked
+      if (isset($datas['PP_loginfailcount']) and $datas['PP_loginfailcount'] >= $conf_PP['NBLOGFAIL'])
+      {
+        $query = '
 UPDATE '.USERS_TABLE.'
 SET PP_lock = "true"
 WHERE username = "'.stripslashes($username).'"
 LIMIT 1
 ;';
-      pwg_query($query);
-
+        pwg_query($query);
+      }
     }
   }
 }

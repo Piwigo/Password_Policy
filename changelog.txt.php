@@ -65,5 +65,8 @@ Plugin Name: Password Policy
 		   Update de_DE, thanks to bigant
 
 --- 2.7.4 : Fix white page for german users (bug lexiglot)
+
+--- 2.7.5 : Fixed - Admin and Webmaster accounts were not correctly excluded on login failure protection
+             
 */
 ?>
