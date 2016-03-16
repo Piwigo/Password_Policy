@@ -67,6 +67,9 @@ Plugin Name: Password Policy
 --- 2.7.4 : Fix white page for german users (bug lexiglot)
 
 --- 2.7.5 : Fixed - Admin and Webmaster accounts were not correctly excluded on login failure protection
+
+--- 2.8.0 : Piwigo 2.8 compatibility check. Known issues: Shortcut to user's profile does not work anymore
+
              
 */
 ?>
