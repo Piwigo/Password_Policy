@@ -541,17 +541,17 @@ SELECT DISTINCT id, PP_lock
         array_push($page['errors'], $error);
       }
     }  
-
-// +-----------------------------------------------------------------------+
-// |                           templates display                           |
-// +-----------------------------------------------------------------------+
-    $template->set_filename('plugin_admin_content', dirname(__FILE__) . '/template/PP_userlist.tpl');
-    $template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');		
   }
 	else
 	{
     array_push($page['errors'], l10n('PP_Err_Userlist_Settings'));
   }
+
+// +-----------------------------------------------------------------------+
+// |                           templates display                           |
+// +-----------------------------------------------------------------------+
+  $template->set_filename('plugin_admin_content', dirname(__FILE__) . '/template/PP_userlist.tpl');
+  $template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');
 
   break;
 }

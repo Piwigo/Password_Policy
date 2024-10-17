@@ -1,3 +1,4 @@
+{if isset($PP_VERSION)}
 {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
 {combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.js'}
 {combine_script id='jquery.tablesorter' require='jquery' path=$PP_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
@@ -78,9 +79,9 @@ $(document).ready(function()
         <tbody>
         {foreach from=$users item=user name=users_loop}
           <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
-            <td><input type="checkbox" name="selection[]" value="{$user.ID}" {$user.CHECKED} id="selection-{$user.ID}"/></td>
+          <td><input type="checkbox" name="selection[]" value="{$user.ID}" {if isset($user.CHECKED)}{$user.CHECKED}{/if} id="selection-{$user.ID}"/></td>
             <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$PP_PATH}admin/template/icons/edit_s.png" alt=""/></a></td>
+            <td style="text-align:center;"><a href="./admin.php?page=user_list&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$PP_PATH}admin/template/icons/edit_s.png" alt=""/></a></td>
             <td>{$user.STATUS}</td>
             <td>{$user.EMAIL}</td>
           {if $PWRESET == True}
@@ -137,3 +138,4 @@ $(document).ready(function()
 	</div>
 {/if}
 </form>
+{/if}

@@ -43,7 +43,7 @@ jQuery().ready(function()
         <input type="text" name="PP_Password_Score" value="{$PP_PASSWORD_SCORE}" size="5" style="text-align: center;"/>
       <br /><br />
         {'PP_PasswordTest'|@translate}
-        <input class="cluetip" title="{'PP_passwtestTitle'|translate}|{'PP_passwtestTitle_d'|translate}" type="text" name="PP_Password_Test" value="{$PP_PASSWORD_TEST}" size="50" style="text-align: left;"/>
+<input class="cluetip" title="{'PP_passwtestTitle'|translate}|{'PP_passwtestTitle_d'|translate}" type="text" name="PP_Password_Test" {if isset($PP_PASSWORD_TEST)}value="{$PP_PASSWORD_TEST}"{/if} size="50" style="text-align: left;"/>
         &nbsp;&nbsp;&nbsp;
         <input class="submit" type="submit" value="{'PP_PasswordTest'|@translate}" name="PasswordTest"/>
         &nbsp;&nbsp;&nbsp;{'PP_ScoreTest'|@translate}{$PP_PASSWORD_TEST_SCORE}
@@ -99,8 +99,8 @@ jQuery().ready(function()
         <label class="cluetip" title="{'PP_UserLocked_Custom_Txt'|translate}|{'PP_UserLocked_Custom_Txt_d'|translate}">
           {'PP_UserLocked_Custom_Txt'|@translate}
         </label>
-        <textarea class="pp_textfields" name="PP_CustomLockMsg" id="PP_CustomLockMsg" rows="10" {$TAG_INPUT_ENABLED}>{$PP_USRLOCKEDTXT}</textarea>
-          {if 'FCK_PATH'|@defined}
+      <textarea class="pp_textfields" name="PP_CustomLockMsg" id="PP_CustomLockMsg" rows="10" {if isset($TAG_INPUT_ENABLED)}{$TAG_INPUT_ENABLED}{/if}>{$PP_USRLOCKEDTXT}</textarea>
+          {if defined('FCK_PATH')}
             <div style="text-align:right;">
               <a href="#" onClick="toogleEditor('PP_CustomLockMsg'); return false;">FCK Editor On/Off</a>
             </div>
@@ -110,7 +110,7 @@ jQuery().ready(function()
   </ul>
 
   <p>
-    <input class="submit" type="submit" value="{'PP_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED}/>
+    <input class="submit" type="submit" value="{'PP_submit'|@translate}" name="submit" {if isset($TAG_INPUT_ENABLED)}{$TAG_INPUT_ENABLED}{/if}/>
   </p>
 </fieldset>
 </form>
