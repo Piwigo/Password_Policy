@@ -147,7 +147,8 @@ switch ($page['tab'])
             'PP_LOGFAILEDPASSW_TRUE'           => $conf_PP['LOGFAILBLOCK']=='true' ? 'checked="checked"' : '' ,
             'PP_LOGFAILEDPASSW_FALSE'          => $conf_PP['LOGFAILBLOCK']=='false' ? 'checked="checked"' : '' ,
             'PP_NBLOGFAIL'                     => $conf_PP['NBLOGFAIL'],
-            'PP_USRLOCKEDTXT'                  => $conf_PP['USRLOCKEDTXT']
+	    'PP_USRLOCKEDTXT'                  => $conf_PP['USRLOCKEDTXT'],
+	    'PP_is_FCKEditor_active' => isset($pwg_loaded_plugins['FCKEditor']),
     )
   );
 
